@@ -1,2 +1,7 @@
+#Rendu Travaux Pratiques SQL
+Ces Travaux Pratiques ont été donnée par Jean-Frédéric VINCENT
 
-Travaux Pratiques réaliser en cours de SQL
+:paperclip: Lien vers les cours et les énoncés 
+https://github.com/seven-valley/formation-sql-les-fondamentaux-bien-debutez
+
+
