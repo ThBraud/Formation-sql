@@ -109,6 +109,10 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 
 💡*La condition WHERE dans une requête UPDATE permet de spécifier quelles lignes doivent être modifiés* 
 
+### Supprimer des données
+
+- `DELETE FROM table WHERE condition`
+
 ### Exemple de conditions dans le WHERE
 
 - Avec une seule condition simple pour modifier une seule ligne par exemple un client spécifique :
