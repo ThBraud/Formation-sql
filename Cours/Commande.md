@@ -105,13 +105,13 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 
 ### Modifier des données
 
-- `UPDATE table SET colonne = ‘nouvelle_valeur’ WHERE condition;`
+- `UPDATE nom_table SET colonne = ‘nouvelle_valeur’ WHERE condition;`
 
 💡*La condition WHERE dans une requête UPDATE permet de spécifier quelles lignes doivent être modifiés* 
 
 ### Supprimer des données
 
-- `DELETE FROM table WHERE condition`
+- `DELETE FROM nom_table WHERE condition`
 
 ### Exemple de conditions dans le WHERE
 
