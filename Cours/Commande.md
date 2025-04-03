@@ -2,7 +2,7 @@
 
 ### Créer une base de données :
 
-<span style="color:red">Sans condition :</span>
+Sans condition :
 
 
 - `CREATE DATABASE nom_base`;
