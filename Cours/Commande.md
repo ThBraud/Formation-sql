@@ -101,3 +101,11 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 ```
 
 💡Pour les chiffres on peut les écrire directement sans les apostrophes
+
+
+# Titre de section
+
+Voici un texte en <span style="color:green">vert</span>
+
+
+
