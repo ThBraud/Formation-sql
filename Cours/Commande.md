@@ -103,7 +103,30 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 
 💡Pour les chiffres on peut les écrire directement sans les apostrophes
 
+### Modifier des données
 
+- `UPDATE table SET colonne = ‘nouvelle_valeur’ WHERE condition;`
+
+💡*La condition WHERE dans une requête UPDATE permet de spécifier quelles lignes doivent être modifiés* 
+
+### Exemple de conditions dans le WHERE
+
+- Avec une seule condition simple pour modifier une seule ligne par exemple un client spécifique :
+
+```sql
+UPDATE clients SET prenom = 'Pierre' WHERE id = 1;
+
+```
+
+- Avec une valeur spécifique, pour modifier plusieurs lignes,  par exemple tous les clients d'une certaine ville :
+
+```sql
+UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
+```
+
+*Il y a encore plusieurs conditions possibles avec de nombreux opérateurs logiques et relationnels comme `AND`, `OR` ou encore `BETWEEN`, `LIKE`, `IN`*  
+
+⚠️ **Attention faire un UPDATE sans WHERE met toute les lignes de la tables a jour !**
 
 
 
