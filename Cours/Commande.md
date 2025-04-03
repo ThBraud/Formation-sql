@@ -2,7 +2,8 @@
 
 ### Créer une base de données :
 
-Sans condition : 
+Sans condition : <span style="color:red">[Texte en rouge]</span>
+
 
 - `CREATE DATABASE nom_base`;
 
@@ -103,9 +104,7 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 💡Pour les chiffres on peut les écrire directement sans les apostrophes
 
 
-# Titre de section
 
-Voici un texte en <span style="color:green">vert</span>
 
 
 
