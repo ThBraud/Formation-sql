@@ -181,8 +181,9 @@ SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire DESC LIMIT 1 ##Ac
 
 ### Exemples de jointure
 ```sql
-SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire ASC LIMIT 1 ##Acteur avec le plus petit salaire
-SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire DESC LIMIT 1 ##Acteur avec le plus gros salaire
+SELECT COALESCE(SUM(facture.total),0) AS CA_ParCLient, client.nom AS client_nom FROM client LEFT JOIN projet ON client.id = projet.client_id LEFT JOIN devis ON projet.id = devis.projet_id LEFT JOIN facture ON devis.id = facture.devis_id GROUP BY client.id
+
+SELECT acteur.prenom, acteur.nom, film.nom FROM acteur INNER JOIN acteur_film ON acteur.id = acteur_film.acteur_id INNER JOIN film ON acteur_film.film_id= film.id WHERE acteur.nom = 'PITT' AND acteur.prenom = 'Brad'
 ```
 
 
