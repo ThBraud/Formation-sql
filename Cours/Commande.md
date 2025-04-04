@@ -101,7 +101,7 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 ('Scottish Fold','Marron','10');
 ```
 
-💡**Pour les chiffres on peut les écrire directement sans les apostrophes**
+💡*Pour les chiffres on peut les écrire directement sans les apostrophes*
 
 ### Modifier des données
 
@@ -166,7 +166,8 @@ SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire DESC LIMIT 1 ##Ac
 ### Afficher uniquement les correspondances
 
 - `INNER JOIN`
-💡**Le INNER n'est pas nécessaire mais on l'écrit par convention.**
+  
+💡*Le INNER n'est pas nécessaire mais on l'écrit par convention.*
 
 ### Afficher tout de la table1 + correspondances table2
 
