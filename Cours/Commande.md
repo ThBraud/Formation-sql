@@ -132,6 +132,54 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
 
 ⚠️ **Attention faire un UPDATE ou un DELETE sans WHERE met toute les lignes de la tables a jour !**
 
+# Lecture de données
+
+### Afficher toutes les données
+
+- `SELECT * FROM nom_table;`
+
+### Sélectionner des colonnes spécifiques
+
+- `SELECT colonne1, colonne 2 FROM nom_table;`
+
+### Supprimer les doublons
+
+- `SELECT * DISTINCT table WHERE condition;`
+
+### Filtrer les résultats
+
+- `SELECT * FROM table WHERE condition`;
+
+### Trier les résultats
+
+- `SELECT * FROM table ORDER BY colonne ASC/DESC;`
+
+### Exemple de lecture données
+
+```sql
+SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire ASC LIMIT 1 ##Acteur avec le plus petit salaire
+SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire DESC LIMIT 1 ##Acteur avec le plus gros salaire
+```
+
+# Jointures
+
+### Afficher uniquement les correspondances
+
+- `INNER JOIN`
+
+### Afficher tout de la table1 + correspondances table2
+
+- `LEFT JOIN`
+
+### Afficher tout de la table2 + correspondance de table1
+
+- `RIGHT JOIN`
+
+### Afficher toute les données des deux tables
+
+- `FULL JOIN`
+
+### Exemples de jointure
 
 
 
