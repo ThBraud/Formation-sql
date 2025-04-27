@@ -130,7 +130,11 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
 
 *Il y a encore plusieurs conditions possibles avec de nombreux opérateurs logiques et relationnels comme `AND`, `OR` ou encore `BETWEEN`, `LIKE`, `IN`*  
 
-⚠️ **Attention faire un UPDATE ou un DELETE sans WHERE met toute les lignes de la tables a jour !**
+⚠️ **Attention faire un UPDATE ou un DELETE sans WHERE met toute les lignes de la table à jour !**  
+
+### Supprimer tout les lignes d’un table
+
+- `TRUNCATE TABLE nom_table`
 
 # Lecture de données
 
