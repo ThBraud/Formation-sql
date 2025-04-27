@@ -12,5 +12,5 @@ Le but était de découvrir SQL en apprenant les bases :
 - Insérer des données
 - Faire des requêtes précises par exemple afficher une moyenne.
   
-### :bookmark_tabs: Cours  
+### :notebook: Cours  
 Les cours sont faits par moi-même et regroupent des informations importantes et utiles pour l'apprentissage et l'utilisation de SQL
