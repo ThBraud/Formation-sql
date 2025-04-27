@@ -93,21 +93,29 @@ CONSTRAINT pk_chat PRIMARY KEY (id)
 
 ### Ajouter une colonne :
 
-- `ALTER TABLE nom_table ADD colonne TYPE;`
+- ```sql
+  ALTER TABLE nom_table ADD colonne TYPE;
+  ```
 
 ### Modifier une colonne
 
-- `ALTER TABLE nom_table MODIFY colonne TYPE;`
+- ```sql
+  ALTER TABLE nom_table MODIFY colonne TYPE;
+  ```
 
 ### Supprimer une colonne
 
-- `ALTER TABLE nom_table DROP colonne;`
+- ```sql
+  ALTER TABLE nom_table DROP colonne;
+  ```
 
 # Manipulations des données
 
 ### Insérer des données
 
-- `INSERT INTO table (nom_des_valeurs) VALUES (’valeur1’, ‘valeur2’);`
+- ```sql
+  INSERT INTO table (nom_des_valeurs) VALUES (’valeur1’, ‘valeur2’);
+  ```
 
 ## Exemple d’insertions de données
 
@@ -123,13 +131,17 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 
 ### Modifier des données
 
-- `UPDATE nom_table SET colonne = ‘nouvelle_valeur’ WHERE condition;`
+- ```sql
+  UPDATE nom_table SET colonne = ‘nouvelle_valeur’ WHERE condition;
+  ```
 
 💡*La condition WHERE dans une requête UPDATE permet de spécifier quelles lignes doivent être modifiés* 
 
 ### Supprimer des données
 
-- `DELETE FROM nom_table WHERE condition`
+- ```sql
+  DELETE FROM nom_table WHERE condition;
+  ```
 
 ### Exemple de conditions dans le WHERE
 
@@ -152,25 +164,35 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
 
 ### Supprimer tout les lignes d’un table
 
-- `TRUNCATE TABLE nom_table`
+- ```sql
+  TRUNCATE TABLE nom_table;
+  ```
 
 # Lecture de données
 
 ### Afficher toutes les données
 
-- `SELECT * FROM nom_table;`
+- ```sql
+  SELECT * FROM nom_table;
+  ```
 
 ### Sélectionner des colonnes spécifiques
 
-- `SELECT colonne1, colonne 2 FROM nom_table;`
+- ```sql
+  SELECT colonne1, colonne2 FROM nom_table;
+  ```
 
 ### Supprimer les doublons
 
-- `SELECT * DISTINCT table WHERE condition;`
+- ```sql
+  SELECT * DISTINCT table WHERE condition;
+  ```
 
 ### Filtrer les résultats
 
-- `SELECT * FROM table WHERE condition`;
+- ```sql
+  SELECT * FROM table WHERE condition;
+  ```
 
 ### Trier les résultats
 
@@ -187,21 +209,29 @@ SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire DESC LIMIT 1 ##Ac
 
 ### Afficher uniquement les correspondances
 
-- `INNER JOIN`
+- ```sql
+  INNER JOIN
+  ```
   
 💡*Le INNER n'est pas nécessaire mais on l'écrit par convention.*
 
 ### Afficher tout de la table1 + correspondances table2
 
-- `LEFT JOIN`
+- ```sql
+  LEFT JOIN
+  ```
 
 ### Afficher tout de la table2 + correspondance de table1
 
-- `RIGHT JOIN`
+- ```sql
+  RIGHT JOIN
+  ```
 
 ### Afficher toute les données des deux tables
 
-- `FULL JOIN`
+- ```sql
+  FULL JOIN
+  ```
 
 ### Exemples de jointure
 ```sql
