@@ -52,21 +52,29 @@ USE zoo;
 
 Sans condition : 
 
-- `CREATE TABLE nom_table (noms_des_valeurs);`
+- ```sql
+  CREATE TABLE nom_table (noms_des_valeurs);
+  ```
 
 Avec conditions : 
 
-- `CREATE TABLE IF NOT EXIST nom_table (noms_des_valeurs);`
+- ```sql
+  CREATE TABLE IF NOT EXIST nom_table (noms_des_valeurs);
+  ```
 
 ### Supprimer une table :
 
 Sans condition :
 
-- `DROP TABLE nom_table;`
+- ```sql
+  DROP TABLE nom_table;
+  ```
 
 Avec condition : 
 
-- `DROP TABLE IF EXISTS nom_table;`
+- ```sql
+  DROP TABLE IF EXISTS nom_table;
+  ```
 
 ### Exemple de Table :
 
