@@ -5,7 +5,9 @@
 Sans condition :
 
 
-- `CREATE DATABASE nom_base`;
+- ```sql
+  CREATE DATABASE nom_base;
+  ```
 
 Avec condition : 
 
@@ -29,7 +31,9 @@ Avec condition :
 
 ### Sélectionner une base de données
 
-- `USE nom_base`
+- ```sql
+  USE nom_base
+  ```
 
 ### Exemple d’une base de données
 
