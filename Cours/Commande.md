@@ -9,7 +9,9 @@ Sans condition :
 
 Avec condition : 
 
-- `CREATE DATABASE IF NOT EXISTS nom_base`;
+- ```sql
+  CREATE DATABASE IF NOT EXISTS nom_base;
+  ```
 
 ### Supprimer une base de données
 
