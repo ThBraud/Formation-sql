@@ -17,7 +17,9 @@ Avec condition :
 
 Sans condition : 
 
-- `DROP DATABASE nom_base`;
+- ```sql
+  DROP DATABASE nom_base;
+  ```
 
 Avec condition :  
 
