@@ -19,7 +19,9 @@ Sans condition :
 
 Avec condition :  
 
-- `DROP DATABASE IF EXISTS nom_base`;
+- ```sql
+  DROP DATABASE IF EXISTS nom_base;
+  ```
 
 ### Sélectionner une base de données
 
