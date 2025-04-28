@@ -168,7 +168,7 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
   TRUNCATE TABLE nom_table;
   ```
 
-# Lecture de données
+# 🔎 Lecture de données
 
 ### Afficher toutes les données
 
