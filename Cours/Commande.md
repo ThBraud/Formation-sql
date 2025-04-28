@@ -255,15 +255,21 @@ SELECT acteur.prenom, acteur.nom, film.nom FROM acteur INNER JOIN acteur_film ON
 
 ### Moyenne des valeurs
 
-- `AVG(colonne)`
+- ```sql
+  AVG(colonne)
+  ```
 
 ### Valeur minimale
 
-- `MIN(colonne)`
+- ```sql
+  MIN(colonne)
+  ```
 
 ### Valeur maximale
 
-- `MAX(colonne)`
+- ```sql
+  MAX(colonne)
+  ```
 
 ### Grouper les résultats
 
