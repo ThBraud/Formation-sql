@@ -239,7 +239,7 @@ SELECT COALESCE(SUM(facture.total),0) AS CA_ParCLient, client.nom AS client_nom 
 
 SELECT acteur.prenom, acteur.nom, film.nom FROM acteur INNER JOIN acteur_film ON acteur.id = acteur_film.acteur_id INNER JOIN film ON acteur_film.film_id= film.id WHERE acteur.nom = 'PITT' AND acteur.prenom = 'Brad'
 ```
-# Fonctions
+# :chart_with_upwards_trend: Fonctions
 
 ### Nombres de ligne
 
