@@ -1,4 +1,4 @@
-# Base de données
+# 📦 Base de données
 
 ### Créer une base de données :
 
@@ -109,7 +109,7 @@ CONSTRAINT pk_chat PRIMARY KEY (id)
   ALTER TABLE nom_table DROP colonne;
   ```
 
-# Manipulations des données
+# 📝 Manipulations des données
 
 ### Insérer des données
 
@@ -205,7 +205,7 @@ SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire ASC LIMIT 1 ##Act
 SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire DESC LIMIT 1 ##Acteur avec le plus gros salaire
 ```
 
-# Jointures
+# 🔧 Jointures
 
 ### Afficher uniquement les correspondances
 
