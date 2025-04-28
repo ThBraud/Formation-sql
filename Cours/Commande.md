@@ -269,6 +269,13 @@ SELECT acteur.prenom, acteur.nom, film.nom FROM acteur INNER JOIN acteur_film ON
 
 - `HAVING condition`
 
-### Exemples de fonctions
+### Exemples de fonctions  
 
+```sql
+SELECT MAX(salaire) AS PlusGrosSalaire FROM inv_personne; ##Afficher le plus gros salaire
+SELECT MIN(salaire) AS PlusPetitSalaire FROM inv_personn; ##Afficher le plus petit salaire
+```
+```sql
+SELECT yeux, COUNT(*) AS nombre_de_chats FROM Chat GROUP BY yeux;
+```
 
