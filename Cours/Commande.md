@@ -243,11 +243,15 @@ SELECT acteur.prenom, acteur.nom, film.nom FROM acteur INNER JOIN acteur_film ON
 
 ### Nombres de ligne
 
-- `COUNT(colonne)`
+- ```sql
+  COUNT(colonne)
+  ```
 
 ### Somme des valeurs
 
-- `SUM(colonne)`
+- ```sql
+  SUM(colonne)
+  ```
 
 ### Moyenne des valeurs
 
