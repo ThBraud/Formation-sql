@@ -46,7 +46,7 @@ USE zoo;
 
 *💡 On ajoute `CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;` pour avoir les accents, les émojis  et tous les autres caractères Unicode*
 
-# Tables
+# 📋 Tables
 
 ### Créer une table :
 
