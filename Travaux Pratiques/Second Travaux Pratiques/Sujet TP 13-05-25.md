@@ -9,4 +9,6 @@
 SELECT * FROM nom_table
 ```
 ----  
-# :gift: Bonus
+# :gift: Bonus  
+6 : Ecrire une requêtes complexes (avec des jointures)  
+7 : Nombres de lignes par tables
