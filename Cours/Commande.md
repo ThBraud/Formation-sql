@@ -188,11 +188,9 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
   SELECT colonne1, colonne2 FROM nom_table;
   ```
 
-### Supprimer les doublons
+### Récupérer des valeurs uniques
 
-- ```sql
-  SELECT * DISTINCT table WHERE condition;
-  ```
+- `SELECT DISTINCT colonne FROM table;`
 
 ### Filtrer les résultats
 
