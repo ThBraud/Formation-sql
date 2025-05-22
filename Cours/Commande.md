@@ -190,7 +190,9 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
 
 ### Récupérer des valeurs uniques
 
-- `SELECT DISTINCT colonne FROM table;`
+- ```sql
+  SELECT DISTINCT colonne FROM table;
+  ```
 
 ### Filtrer les résultats
 
