@@ -1,4 +1,4 @@
-+# 📦 Base de données
+# 📦 Base de données
 
 ### Créer une base de données :
 
