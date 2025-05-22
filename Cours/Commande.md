@@ -1,4 +1,4 @@
-# 📦 Base de données
++# 📦 Base de données
 
 ### Créer une base de données :
 
@@ -108,6 +108,12 @@ CONSTRAINT pk_chat PRIMARY KEY (id)
 - ```sql
   ALTER TABLE nom_table DROP colonne;
   ```
+
+  ### Ajouter une ligne
+
+- ```sql
+  INSERT INTO nom_table (colonne1, colonne2, …) VALUES (valeur1, valeur2….);
+  ```  
 
 # 📝 Manipulations des données
 
