@@ -202,7 +202,35 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
 
 ### Trier les résultats
 
-- `SELECT * FROM table ORDER BY colonne ASC/DESC;`
+- ```sql
+  SELECT * FROM table ORDER BY colonne ASC/DESC;
+  ```
+
+### Sélectionner une plage de valeurs
+
+- ```sql
+  SELECT * FROM table WHERE colonne BETWEEN valeur1 AND valeur2;
+  ```
+
+### Vérifier si une valeur est dans une liste
+
+- ```sql
+  SELECT * FROM table WHERE colonne IN ('valeur1', 'valeur2');
+  ```
+
+### Rechercher des motifs
+
+- ```sql
+  SELECT * FROM table WHERE colonne LIKE 'A%';
+  ```
+
+💡*La commande au dessus sélectionne toutes les lignes de la table “table” ou la colonne “colonne” commence par la lettre “A”*
+
+*Il a quelque variantes :* 
+
+- `LIKE '%A'` → finit par A
+- `LIKE '%A%'` → contient la lettre A
+- `LIKE '_A%'` → 2e lettre est A (`_` remplace un seul caractère)
 
 ### Exemple de lecture données
 
