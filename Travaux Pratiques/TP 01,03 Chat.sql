@@ -1,3 +1,4 @@
+```sql
 -- Supprime la base zoo si elle existe déjà
 DROP DATABASE IF EXISTS zoo;
 
@@ -59,3 +60,4 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 
 -- Regroupe les chats par couleur des yeux et compte le nombre par groupe
 #SELECT yeux, COUNT(*) AS nombre_de_chats FROM Chat GROUP BY yeux;
+```
