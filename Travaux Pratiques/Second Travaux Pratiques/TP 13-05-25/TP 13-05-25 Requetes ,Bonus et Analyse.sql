@@ -1,8 +1,17 @@
-EXPLAIN SELECT * FROM Clients;
-EXPLAIN SELECT * FROM produits;
-EXPLAIN SELECT * FROM ligne_commandes;
-EXPLAIN SELECT * FROM historique_commandes;
-EXPLAIN SELECT * FROM Commandes;
+-- Analyse l'éxécution pour la table Clients
+#EXPLAIN SELECT * FROM Clients;
+
+-- Analyse l'éxécution pour la table Produits
+#EXPLAIN SELECT * FROM produits;
+
+-- Analyse l'éxécution pour la table Lignes_Commandes
+#EXPLAIN SELECT * FROM ligne_commandes;
+
+-- Analyse l'éxécution pour la table Historique_commandes
+#EXPLAIN SELECT * FROM historique_commandes;
+
+-- Analyse l'éxécution pour la table Commandes
+#EXPLAIN SELECT * FROM Commandes;
 
 
 #SELECT * FROM Clients ORDER BY nom;
