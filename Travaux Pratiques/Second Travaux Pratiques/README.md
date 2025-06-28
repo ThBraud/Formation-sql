@@ -1,7 +1,4 @@
-Dans ce répertoire, se trouvent un TP fait avec un autre formateur.  
+Dans ce répertoire, se trouve un TP fait avec un autre formateur.  
 Le sujet est à retrouver directement ici et non sur le lien précédent.  
 # Informations  
-💡 *Sur le TP, il faut supprimer les '#' avant d'exécuter une commande.*
-
-### :rotating_light: Ne pas supprimer les '#' des commentaires  
-**Pour les différencier, les commentaires ont deux '##' contre '#' pour les commandes.**
+💡 *Sur le TP, il faut supprimer les '#' avant d'exécuter une commande. Merci de les exécuter une par une pour avoir le bon résultat pour chaque commande*
