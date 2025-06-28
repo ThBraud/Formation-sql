@@ -1,8 +1,7 @@
 
 -- Supprime la base zoo si elle existe déjà
-```sql
 DROP DATABASE IF EXISTS zoo;
-```
+
 -- Crée la base de données zoo avec encodage utf8mb4
 CREATE DATABASE IF NOT EXISTS zoo
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
