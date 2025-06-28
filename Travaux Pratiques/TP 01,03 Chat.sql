@@ -1,7 +1,8 @@
-```sql
--- Supprime la base zoo si elle existe déjà
-DROP DATABASE IF EXISTS zoo;
 
+-- Supprime la base zoo si elle existe déjà
+```sql
+DROP DATABASE IF EXISTS zoo;
+```
 -- Crée la base de données zoo avec encodage utf8mb4
 CREATE DATABASE IF NOT EXISTS zoo
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -60,4 +61,3 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 
 -- Regroupe les chats par couleur des yeux et compte le nombre par groupe
 #SELECT yeux, COUNT(*) AS nombre_de_chats FROM Chat GROUP BY yeux;
-```
