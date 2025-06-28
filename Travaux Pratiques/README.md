@@ -1,4 +1,2 @@
 # Informations  
-Sur tout les TPs, il faut supprimmer les '#' avant d'executer une commande  
-
-### :rotating_light: Ne pas supprimer les '#' des commentaires
+💡 *Sur les TPs, il faut supprimer les '#' avant d'exécuter une commande. Merci de les exécuter une par une pour avoir le bon résultat pour chaque commande. Pour les repérer chaque commande fait suite à un commentaire.🚨 Attention, certaines sont sur plusieurs lignes !*

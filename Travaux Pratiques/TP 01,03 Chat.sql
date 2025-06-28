@@ -1,8 +1,17 @@
+-- Supprime la base zoo si elle existe déjà
 DROP DATABASE IF EXISTS zoo;
+
+-- Crée la base de données zoo avec encodage utf8mb4
 CREATE DATABASE IF NOT EXISTS zoo
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Sélectionne la base zoo
 USE zoo;
+
+-- Supprime la table Chat si elle existe
 DROP TABLE IF EXISTS Chat;
+
+-- Crée la table Chat avec id, nom, yeux et âge
 CREATE TABLE IF NOT EXISTS Chat(
 id INT NOT NULL AUTO_INCREMENT,
 nom VARCHAR(50) NOT NULL,
@@ -11,21 +20,42 @@ age TINYINT NOT NULL,
 CONSTRAINT pk_chat PRIMARY KEY (id)
 )ENGINE=INNODB;
 
+-- Insère des données dans la table Chat
 INSERT INTO Chat (nom,yeux,age) VALUES
 ('Maine coon','Marron','20'),
 ('Siamois','Bleu','15'),
 ('Bengal','Marron','18'),
 ('Scottish Fold','Marron','10');
 
-##SELECT * FROM Chat WHERE ID = 2;    ##Selectionner le chat avec ID =2
-##SELECT * FROM Chat ORDER BY nom, age DESC    ##Trier les chats par non et age 
-##SELECT * FROM Chat WHERE age BETWEEN '11' AND '19'  ##Selectionner les chats qui vivient entre 11 et 19
-##SELECT * FROM Chat WHERE nom LIKE '%sia%' ##Selectionner les chats avec "sia"
-##SELECT * FROM Chat WHERE nom LIKE '%a%' ##Selectionner les chats avec la lettre a 
-##SELECT AVG(age) AS AverageAge FROM Chat; ##Moyenne dage des chats
+-- Sélectionne le chat avec l'ID = 2
+#SELECT * FROM Chat WHERE ID = 2;
 
-##SELECT COUNT(*) FROM Chat;  ##Nombre de chats
-##SELECT COUNT(*) FROM Chat WHERE yeux = 'Marron'; ##Compter le nombre de chat marron
-##SELECT * FROM Chat ORDER BY age LIMIT 1 ## Afficher le chat avec la plus petite durée de vie
-##SELECT * FROM Chat ORDER BY age DESC LIMIT 1  ##Afficher le chat avec la durée de vie la plus longue
-##SELECT yeux, COUNT(*) AS nombre_de_chats FROM Chat GROUP BY yeux;
+ -- Trie les chats par nom, puis par âge décroissant
+#SELECT * FROM Chat ORDER BY nom, age DESC;
+
+-- Sélectionne les chats dont l'âge est entre 11 et 19
+#SELECT * FROM Chat WHERE age BETWEEN '11' AND '19'; 
+
+-- Sélectionne les chats dont le nom contient "sia"
+#SELECT * FROM Chat WHERE nom LIKE '%sia%' ##Selectionner les chats avec "sia";
+
+-- Sélectionne les chats dont le nom contient la lettre "a"
+#SELECT * FROM Chat WHERE nom LIKE '%a%';
+
+-- Calcule l'âge moyen des chats
+#SELECT AVG(age) AS AverageAge FROM Chat;
+
+-- Compte le nombre total de chats
+#SELECT COUNT(*) FROM Chat;  
+
+-- Compte le nombre de chats aux yeux marron
+#SELECT COUNT(*) FROM Chat WHERE yeux = 'Marron'; 
+
+-- Affiche le chat le plus jeune
+#SELECT * FROM Chat ORDER BY age LIMIT 1;
+
+-- Affiche le chat le plus vieux
+#SELECT * FROM Chat ORDER BY age DESC LIMIT 1;
+
+-- Regroupe les chats par couleur des yeux et compte le nombre par groupe
+#SELECT yeux, COUNT(*) AS nombre_de_chats FROM Chat GROUP BY yeux;
