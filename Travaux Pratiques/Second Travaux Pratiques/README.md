@@ -1,6 +1,7 @@
-Dans ce répertoire, se trouvent les travaux pratiques faits avec un autre formateur.  
-Les sujets sont à retrouver directement ici et non sur le lien précédent.  
+Dans ce répertoire, se trouvent un TP fait avec un autre formateur.  
+Le sujet est à retrouver directement ici et non sur le lien précédent.  
 # Informations  
-Sur tout les TPs, il faut supprimmer les '#' avant d'executer une commande  
+💡 *Sur le TP, il faut supprimer les '#' avant d'exécuter une commande.*
 
-### :rotating_light: Ne pas supprimer les '#' des commentaires
+### :rotating_light: Ne pas supprimer les '#' des commentaires  
+**Pour les différencier, les commentaires ont deux '##' contre '#' pour les commandes.**
