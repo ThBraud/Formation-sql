@@ -26,13 +26,13 @@ CONSTRAINT pk_categ PRIMARY KEY (id)
 )ENGINE=INNODB;
 
 
---Insertation de données dans la table film
+--Insertion de données dans la table film
 INSERT INTO film (titre, sortie, categ_id) VALUES
 ('STAR WARS', '1977-05-25', 1),
 ('THE MATRIX', '1999-06-23',2),
 ('PULP FICTION', '1994-10-26',  3);
 
---Insertation de données dans la table categ
+--Insertion de données dans la table categ
 INSERT INTO categ (nom) VALUES
 ('Science Fiction'),
 ('Science Fiction'),
