@@ -1,4 +1,3 @@
-
 -- Supprime la base zoo si elle existe déjà
 DROP DATABASE IF EXISTS zoo;
 
