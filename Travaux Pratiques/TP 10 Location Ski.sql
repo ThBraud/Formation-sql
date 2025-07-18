@@ -1,7 +1,14 @@
+--Supprimer la base de donnée si elle existe 
 DROP DATABASE IF EXISTS ski;
+
+--Création de la base de données si elle n'existe pas avec utf8mb4 qui stocke tous les caractères unicodes comme les émojis.
+--Mais aussi avec utf8mb4_unicode_ci qui est insensible à la casse 
 CREATE DATABASE IF NOT EXISTS ski  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+--Utiliser la base de données 
 USE ski;
 
+--Création de table clients avec une primary key 
 DROP TABLE IF EXISTS clients;
 CREATE TABLE IF NOT EXISTS clients (
 noCLi INT NOT NULL,
@@ -13,6 +20,7 @@ ville VARCHAR(255),
 CONSTRAINT pk_commande PRIMARY KEY (NoCLi)
 )ENGINE=INNODB;
 
+--Création de table fiches avec une primary key 
 DROP TABLE IF EXISTS fiches;
 CREATE TABLE IF NOT EXISTS fiches (
 noFic INT NOT NULL,
@@ -24,6 +32,7 @@ etat VARCHAR(255),
 CONSTRAINT pk_commande PRIMARY KEY (noFic)
 )ENGINE=INNODB;
 
+--Création de table lignesFic avec une primary key 
 DROP TABLE IF EXISTS lignesFic;
 CREATE TABLE IF NOT EXISTS lignesFic (
 noFic INT NOT NULL,
@@ -34,6 +43,7 @@ retour DATE,
 CONSTRAINT pk_lignesFic PRIMARY KEY (noLig, noFic)
 ) ENGINE = INNODB;
 
+--Création de table articles avec une primary key 
 DROP TABLE IF EXISTS articles;
 CREATE TABLE IF NOT EXISTS articles (
 refart CHAR (8) NOT NULL,
@@ -43,6 +53,7 @@ codeCate CHAR (5),
 CONSTRAINT pk_article PRIMARY KEY (refart)
 ) ENGINE = INNODB;
 
+--Création de table categories avec une primary key 
 DROP TABLE IF EXISTS categories;
 CREATE TABLE IF NOT EXISTS categories (
 codeCate CHAR (5) NOT NULL,
@@ -50,6 +61,7 @@ libelle VARCHAR(30),
 CONSTRAINT pk_catégories PRIMARY KEY (codeCate)
 ) ENGINE = INNODB;
 
+--Création de table gammes avec une primary key 
 DROP TABLE IF EXISTS gammes;
 CREATE TABLE IF NOT EXISTS gammes (
 codeGam CHAR(5) NOT NULL,
@@ -57,6 +69,7 @@ libelle VARCHAR (45),
 CONSTRAINT pk_ligneFic PRIMARY KEY (codeGam)
 ) ENGINE = INNODB;
 
+--Création de table grilleTarifs avec une primary key 
 DROP TABLE IF EXISTS grilleTarifs;
 CREATE TABLE IF NOT EXISTS grilleTarifs (
 codeGam CHAR (5),
@@ -65,7 +78,7 @@ codeTarif CHAR (5),
 CONSTRAINT pk_grilleTarifs PRIMARY KEY (codeGAM, CodeCate)
 ) ENGINE = INNODB;
 
-
+--Création de table tarifs avec une primary key 
 DROP TABLE IF EXISTS tarifs;
 CREATE TABLE IF NOT EXISTS tarifs (
 codeTarif CHAR (5) ,
@@ -74,8 +87,7 @@ prixJour INT NOT NULL,
 CONSTRAINT pk_tarifs PRIMARY KEY (codeTarif)
 )ENGINE=INNODB;
 
-
-USE ski;
+--Insertion des données dans la table clients
 INSERT INTO clients (noCli, nom, prenom, adresse, cpo, ville) VALUES 
     (1, 'Albert', 'Anatole', 'Rue des accacias', '61000', 'Amiens'),
     (2, 'Bernard', 'Barnabé', 'Rue du bar', '1000', 'Bourg en Bresse'),
@@ -86,6 +98,7 @@ INSERT INTO clients (noCli, nom, prenom, adresse, cpo, ville) VALUES
     (9, 'Dupond', 'Jean', 'Rue des mimosas', '75018', 'Paris'),
     (14, 'Boutaud', 'Sabine', 'Rue des platanes', '75002', 'Paris');
 
+--Insertion des données dans la table fiches
 INSERT INTO fiches (noFic, noCli, dateCrea, datePaiement, etat) VALUES 
     (1001, 14,  DATE_SUB(NOW(),INTERVAL  15 DAY), DATE_SUB(NOW(),INTERVAL  13 DAY),'SO' ),
     (1002, 4,  DATE_SUB(NOW(),INTERVAL  13 DAY), NULL, 'EC'),
@@ -96,6 +109,7 @@ INSERT INTO fiches (noFic, noCli, dateCrea, datePaiement, etat) VALUES
     (1007, 1,  DATE_SUB(NOW(),INTERVAL  3 DAY), NULL, 'EC'),
     (1008, 2,  DATE_SUB(NOW(),INTERVAL  0 DAY), NULL, 'EC');
 
+--Insertion des données dans la table tarifs
 INSERT INTO tarifs (codeTarif, libelle, prixJour) VALUES
     ('T1', 'Base', 10),
     ('T2', 'Chocolat', 15),
@@ -104,12 +118,14 @@ INSERT INTO tarifs (codeTarif, libelle, prixJour) VALUES
     ('T5', 'Or', 50),
     ('T6', 'Platine', 90);
 
+--Insertion des données dans la table gammes
 INSERT INTO gammes (codeGam, libelle) VALUES
     ('PR', 'Matériel Professionnel'),
     ('HG', 'Haut de gamme'),
     ('MG', 'Moyenne gamme'),
     ('EG', 'Entrée de gamme');
 
+--Insertion des données dans la table categories
 INSERT INTO categories (codeCate, libelle) VALUES
     ('MONO', 'Monoski'),
     ('SURF', 'Surf'),
@@ -118,6 +134,7 @@ INSERT INTO categories (codeCate, libelle) VALUES
     ('FOP', 'Ski de fond patineur'),
     ('SA', 'Ski alpin');
 
+--Insertion des données dans la table grilleTarifs
 INSERT INTO grilleTarifs (codeGam, codeCate, codeTarif) VALUES
     ('EG', 'MONO', 'T1'),
     ('MG', 'MONO', 'T2'),
@@ -140,6 +157,7 @@ INSERT INTO grilleTarifs (codeGam, codeCate, codeTarif) VALUES
     ('HG', 'SA', 'T4'),
     ('PR', 'SA', 'T6');
 
+--Insertion des données dans la table articles
 INSERT INTO articles (refart, designation, codeGam, codeCate) VALUES 
     ('F01', 'Fischer Cruiser', 'EG', 'FOA'),
     ('F02', 'Fischer Cruiser', 'EG', 'FOA'),
@@ -172,6 +190,7 @@ INSERT INTO articles (refart, designation, codeGam, codeCate) VALUES
     ('A11', 'Salomon Pro Link Equipe 4S', 'PR', 'SA'),
     ('A21', 'Salomon 3V RACE JR+L10', 'PR', 'SA');
 
+--Insertion des données dans la table lignesFic
 INSERT INTO lignesFic (noFic, noLig,  refart, depart, retour) VALUES 
     (1001, 1, 'F05', DATE_SUB(NOW(),INTERVAL  15 DAY), DATE_SUB(NOW(),INTERVAL  13 DAY)),
     (1001, 2, 'F50', DATE_SUB(NOW(),INTERVAL  15 DAY), DATE_SUB(NOW(),INTERVAL  14 DAY)),
@@ -193,12 +212,17 @@ INSERT INTO lignesFic (noFic, noLig,  refart, depart, retour) VALUES
     (1007, 4, 'S02', DATE_SUB(NOW(),INTERVAL  0 DAY), NULL),
     (1008, 1, 'S01', DATE_SUB(NOW(),INTERVAL  0 DAY), NULL);
     
-    #SELECT * FROM clients WHERE nom LIKE 'D%'; ## Liste des clients (toutes les informations) dont le nom commence par un D
-    #SELECT clients.nom AS nom, clients.prenom AS prenom FROM clients ## Nom et prénom de tous les clients
-    #SELECT clients.nom AS nom, clients.prenom AS prenom, fiches.etat AS etat, fiches.noFic AS NoFic FROM fiches LEFT JOIN clients ON fiches.noCli = clients.noCli WHERE cpo LIKE '44%' ## Liste des fiches (n°, état) pour les clients (nom, prénom) qui habitent en Loire Atlantique (44)
+-- Liste des clients (toutes les informations) dont le nom commence par un D
+SELECT * FROM clients WHERE nom LIKE 'D%';
+
+--Nom et prénom de tous les clients
+#SELECT clients.nom AS nom, clients.prenom AS prenom FROM clients ## Nom et prénom de tous les clients
+
+--Liste des fiches (n°, état) pour les clients (nom, prénom) qui habitent en Loire Atlantique (44)
+#SELECT clients.nom AS nom, clients.prenom AS prenom, fiches.etat AS etat, fiches.noFic AS NoFic FROM fiches LEFT JOIN clients ON fiches.noCli = clients.noCli WHERE cpo LIKE '44%' ## Liste des fiches (n°, état) pour les clients (nom, prénom) qui habitent en Loire Atlantique (44)
     
-    #Détail de la fiche n°1002
-    #SELECT fiches.noFic, clients.nom AS nom , clients.prenom AS prenom, articles.refart AS refart, articles.designation AS designation, lignesFic.depart AS depart, lignesFic.retour AS retour, tarifs.prixJour AS prixJour, (DATEDIFF(lignesFic.retour, lignesFic.depart)*tarifs.prixJour) AS montant FROM tarifs  
+--Détail de la fiche n°1002
+#SELECT fiches.noFic, clients.nom AS nom , clients.prenom AS prenom, articles.refart AS refart, articles.designation AS designation, lignesFic.depart AS depart, lignesFic.retour AS retour, tarifs.prixJour AS prixJour, (DATEDIFF(lignesFic.retour, lignesFic.depart)*tarifs.prixJour) AS montant FROM tarifs  
 #LEFT JOIN grilleTarifs ON tarifs.codeTarif = grilleTarifs.codeTarif
 #LEFT JOIN categories ON grilleTarifs.codeCate = categories.codeCate  
 #LEFT JOIN articles ON categories.codeCate = articles.codeCate  
@@ -206,9 +230,10 @@ INSERT INTO lignesFic (noFic, noLig,  refart, depart, retour) VALUES
 #LEFT JOIN fiches ON lignesFic.noFic = fiches.noFic  
 #LEFT JOIN clients ON fiches.noCli = clients.noCli WHERE fiches.noFic = 1002 GROUP BY refart
   
-  #SELECT gammes.libelle AS Gamme, AVG(tarifs.prixJour) AS 'tarif journalier moyen' FROM tarifs INNER JOIN grilleTarifs ON tarifs.codeTarif = grilleTarifs.codeTarif INNER JOIN gammes ON grilleTarifs.codeGam = gammes.codeGam GROUP BY gammes.libelle ## Prix journalier moyen de location par gamme
+--Prix journalier moyen de location par gamme
+#SELECT gammes.libelle AS Gamme, AVG(tarifs.prixJour) AS 'tarif journalier moyen' FROM tarifs INNER JOIN grilleTarifs ON tarifs.codeTarif = grilleTarifs.codeTarif INNER JOIN gammes ON grilleTarifs.codeGam = gammes.codeGam GROUP BY gammes.libelle
   
-  ##Détail de la fiche n°1002 avec le total
+--Détail de la fiche n°1002 avec le total
 #SELECT fiches.noFic, clients.nom AS nom , clients.prenom AS prenom, articles.refart AS refart, articles.designation AS designation, lignesFic.depart AS depart, lignesFic.retour AS retour, tarifs.prixJour AS prixJour, (DATEDIFF(lignesFic.retour, lignesFic.depart)*tarifs.prixJour) AS montant, SUM( (DATEDIFF(IFNULL(retour, NOW()+1), depart) + 1) * prixJour) AS total FROM tarifs  
 #LEFT JOIN grilleTarifs ON tarifs.codeTarif = grilleTarifs.codeTarif
 #LEFT JOIN categories ON grilleTarifs.codeCate = categories.codeCate  
@@ -218,18 +243,20 @@ INSERT INTO lignesFic (noFic, noLig,  refart, depart, retour) VALUES
 #LEFT JOIN clients ON fiches.noCli = clients.noCli WHERE fiches.noFic = 1002 GROUP BY refart 
 
   
-  
-  
-#SELECT categories.libelle AS categories, gammes.libelle AS Gamme, tarifs.libelle AS libelle, tarifs.prixJour AS prixJour FROM tarifs INNER JOIN grilleTarifs ON tarifs.codeTarif = grilleTarifs.codeTarif INNER JOIN gammes ON grilleTarifs.codeGam = gammes.codeGam INNER JOIN categories ON grilleTarifs.codeCate = categories.codeCate  ##Grille des tarifs
+--Grille des tarifs
+#SELECT categories.libelle AS categories, gammes.libelle AS Gamme, tarifs.libelle AS libelle, tarifs.prixJour AS prixJour FROM tarifs INNER JOIN grilleTarifs ON tarifs.codeTarif = grilleTarifs.codeTarif INNER JOIN gammes ON grilleTarifs.codeGam = gammes.codeGam INNER JOIN categories ON grilleTarifs.codeCate = categories.codeCate
 
-#SELECT articles.refart AS refart, articles.designation AS designation, COUNT(lignesFic.refart) AS nombre_de_locations FROM categories INNER JOIN articles ON categories.codeCate = articles.codeCate LEFT JOIN lignesFic ON articles.refart = lignesFic.refart WHERE categories.codeCate = 'SURF' GROUP BY articles.refart;  ##Liste des locations de la catégorie SURF
-#Calcul du nombre moyen d’articles loués par fiche de location (fait avec de l'aide)
+--Liste des locations de la catégorie SURF
+#SELECT articles.refart AS refart, articles.designation AS designation, COUNT(lignesFic.refart) AS nombre_de_locations FROM categories INNER JOIN articles ON categories.codeCate = articles.codeCate LEFT JOIN lignesFic ON articles.refart = lignesFic.refart WHERE categories.codeCate = 'SURF' GROUP BY articles.refart;
+
+--Calcul du nombre moyen d’articles loués par fiche de location (fait avec de l'aide)
 #SELECT AVG(subquery.nbLig) AS "Moyenne Article Loués" FROM (SELECT lF.noFic AS NumeroFiche, COUNT(lF.noLig) AS nbLig FROM lignesFic lF GROUP BY lF.noFic ) AS subquery;
 
-#SELECT categories.libelle AS categories, COUNT(lignesFic.noLig) AS 'nombre de location' FROM categories LEFT JOIN articles ON categories.codeCate = articles.codeCate LEFT JOIN lignesFic ON articles.refart = lignesFic.refart WHERE categories.libelle IN ('SURF','Patinette','Ski alpin') GROUP BY categories.libelle  ##Calcul du nombre de fiches de location établies pour les catégories de location Ski alpin, Surf et Patinette
+--Calcul du nombre de fiches de location établies pour les catégories de location Ski alpin, Surf et Patinette
+#SELECT categories.libelle AS categories, COUNT(lignesFic.noLig) AS 'nombre de location' FROM categories LEFT JOIN articles ON categories.codeCate = articles.codeCate LEFT JOIN lignesFic ON articles.refart = lignesFic.refart WHERE categories.libelle IN ('SURF','Patinette','Ski alpin') GROUP BY categories.libelle
 
-
-##SELECT avg(MontantParFiche) FROM (SELECT noFic, SUM((DATEDIFF(IFNULL(retour, NOW()+1),depart)+1)*prixJour) MontantParfiche FROM lignesfic l INNER JOIN articles a USING (refart) INNER JOIN grilletarifs g ON (a.codeGam=g.codeGam AND a.codeCate=g.codeCate) INNER JOIN tarifs t USING (codeTarif) GROUP BY noFic) info ;  ## Calcul du montant moyen des fiches de location (Correction)
+--Calcul du montant moyen des fiches de location (Correction)
+##SELECT avg(MontantParFiche) FROM (SELECT noFic, SUM((DATEDIFF(IFNULL(retour, NOW()+1),depart)+1)*prixJour) MontantParfiche FROM lignesfic l INNER JOIN articles a USING (refart) INNER JOIN grilletarifs g ON (a.codeGam=g.codeGam AND a.codeCate=g.codeCate) INNER JOIN tarifs t USING (codeTarif) GROUP BY noFic) info ;
 
 
 
