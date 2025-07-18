@@ -8,7 +8,7 @@ CREATE DATABASE IF NOT EXISTS prime  CHARACTER SET utf8mb4 COLLATE utf8mb4_unico
 --Utiliser la base données prime
 USE prime;
 
---Création de la table film
+--Création de la table film avec une primary key
 DROP TABLE IF EXISTS film;
 CREATE TABLE IF NOT EXISTS film (
   id INT  NOT NULL AUTO_INCREMENT,
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS film (
   CONSTRAINT pk_film PRIMARY KEY(id)
 )ENGINE=INNODB;
 
---Création de la table acteur 
+--Création de la table acteur avec une primary key
 DROP TABLE IF EXISTS acteur;
 CREATE TABLE IF NOT EXISTS acteur (
   id INT NOT NULL AUTO_INCREMENT,
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS acteur (
    CONSTRAINT pk_acteur PRIMARY KEY(id)
 )ENGINE=INNODB;
 
---Création de la table acteur_film
+--Création de la table acteur_film avec une primary key
 DROP TABLE IF EXISTS acteur_film;
 CREATE TABLE IF NOT EXISTS acteur_film (
 film_id INT NOT NULL,
