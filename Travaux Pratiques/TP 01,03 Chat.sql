@@ -2,7 +2,8 @@
 -- Supprime la base zoo si elle existe déjà
 DROP DATABASE IF EXISTS zoo;
 
--- Crée la base de données zoo avec encodage utf8mb4
+--Création de la base de données si elle n'existe pas avec utf8mb4 qui stocke tous les caractères unicodes comme les émojis.
+--Mais aussi avec utf8mb4_unicode_ci qui est insensible à la casse 
 CREATE DATABASE IF NOT EXISTS zoo
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 

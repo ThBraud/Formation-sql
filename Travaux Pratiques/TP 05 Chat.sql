@@ -1,7 +1,8 @@
 -- Supprimer la base de données si elle existe
 DROP DATABASE IF EXISTS spa;
 
--- Créer la base avec encodage UTF8 (très bon choix pour les caractères accentués)
+--Création de la base de données si elle n'existe pas avec utf8mb4 qui stocke tous les caractères unicodes comme les émojis.
+--Mais aussi avec utf8mb4_unicode_ci qui est insensible à la casse 
 CREATE DATABASE IF NOT EXISTS spa
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 

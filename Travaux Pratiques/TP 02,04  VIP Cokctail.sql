@@ -10,7 +10,7 @@ USE invitation;
 -- Supprime la table 'inv_personne' si elle existe déjà
 DROP TABLE IF EXISTS inv_personne;
 
--- Crée la table 'inv_personne'
+-- Crée la table 'inv_personne' avec une primary key
 CREATE TABLE IF NOT EXISTS inv_personne(
 id INT NOT NULL AUTO_INCREMENT,
 prenom VARCHAR(100) NOT NULL,
