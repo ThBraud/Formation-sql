@@ -1,6 +1,6 @@
 # Rendu Travaux Pratiques SQL et cours personnel
 
-Ces Travaux Pratiques ont été donnée par Jean-Frédéric VINCENT  
+Ces Travaux Pratiques ont été donnée par [Jean-Frédéric VINCENT](https://www.linkedin.com/in/jean-fred-vincent/)
   
 ## Lien vers les cours et les énoncés  
 
