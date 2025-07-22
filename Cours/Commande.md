@@ -35,7 +35,7 @@ Avec condition :
   USE nom_base
   ```
 
-### Exemple d’une base de données
+#### Exemple d’une base de données
 
 ```sql
 DROP DATABASE IF EXISTS zoo;
