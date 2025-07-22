@@ -15,7 +15,7 @@ Avec condition :
   CREATE DATABASE IF NOT EXISTS nom_base;
   ```
 
-#### Supprimer une base de données
+### Supprimer une base de données
 
 Sans condition : 
 
@@ -29,13 +29,13 @@ Avec condition :
   DROP DATABASE IF EXISTS nom_base;
   ```
 
-#### Sélectionner une base de données
+### Sélectionner une base de données
 
 - ```sql
   USE nom_base
   ```
 
-#### Exemple d’une base de données
+### Exemple d’une base de données
 
 ```sql
 DROP DATABASE IF EXISTS zoo;
