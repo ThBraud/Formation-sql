@@ -1,6 +1,6 @@
 # 📦 Base de données
 
-### Créer une base de données :
+#### Créer une base de données :
 
 Sans condition :
 
@@ -15,7 +15,7 @@ Avec condition :
   CREATE DATABASE IF NOT EXISTS nom_base;
   ```
 
-### Supprimer une base de données
+#### Supprimer une base de données
 
 Sans condition : 
 
@@ -29,13 +29,13 @@ Avec condition :
   DROP DATABASE IF EXISTS nom_base;
   ```
 
-### Sélectionner une base de données
+#### Sélectionner une base de données
 
 - ```sql
   USE nom_base
   ```
 
-### Exemple d’une base de données
+#### Exemple d’une base de données
 
 ```sql
 DROP DATABASE IF EXISTS zoo;
@@ -48,7 +48,7 @@ USE zoo;
 
 # 📋 Tables
 
-### Créer une table :
+#### Créer une table :
 
 Sans condition : 
 
@@ -62,7 +62,7 @@ Avec conditions :
   CREATE TABLE IF NOT EXIST nom_table (noms_des_valeurs);
   ```
 
-### Supprimer une table :
+#### Supprimer une table :
 
 Sans condition :
 
@@ -76,7 +76,7 @@ Avec condition :
   DROP TABLE IF EXISTS nom_table;
   ```
 
-### Exemple de Table :
+#### Exemple de Table :
 
 ```sql
 DROP TABLE IF EXISTS Chat;
@@ -91,19 +91,19 @@ CONSTRAINT pk_chat PRIMARY KEY (id)
 
 💡 *On défini pendant la création de la table les types des valeurs . Pour plus d’informations sur les types aller voir le cours sur les types*
 
-### Ajouter une colonne :
+#### Ajouter une colonne :
 
 - ```sql
   ALTER TABLE nom_table ADD colonne TYPE;
   ```
 
-### Modifier une colonne
+#### Modifier une colonne
 
 - ```sql
   ALTER TABLE nom_table MODIFY colonne TYPE;
   ```
 
-### Supprimer une colonne
+#### Supprimer une colonne
 
 - ```sql
   ALTER TABLE nom_table DROP COLUMN colonne;
@@ -117,7 +117,7 @@ CONSTRAINT pk_chat PRIMARY KEY (id)
 
 # 📝 Manipulations des données
 
-### Insérer des données
+#### Insérer des données
 
 - ```sql
   INSERT INTO table (nom_des_valeurs) VALUES (’valeur1’, ‘valeur2’);
@@ -135,7 +135,7 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 
 💡*Pour les chiffres on peut les écrire directement sans les apostrophes*
 
-### Modifier des données
+#### Modifier des données
 
 - ```sql
   UPDATE nom_table SET colonne = ‘nouvelle_valeur’ WHERE condition;
@@ -143,13 +143,13 @@ INSERT INTO Chat (nom,yeux,age) VALUES
 
 💡*La condition WHERE dans une requête UPDATE permet de spécifier quelles lignes doivent être modifiés* 
 
-### Supprimer des données
+#### Supprimer des données
 
 - ```sql
   DELETE FROM nom_table WHERE condition;
   ```
 
-### Exemple de conditions dans le WHERE
+#### Exemple de conditions dans le WHERE
 
 - Avec une seule condition simple pour modifier une seule ligne par exemple un client spécifique :
 
@@ -168,7 +168,7 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
 
 ⚠️ **Attention faire un UPDATE ou un DELETE sans WHERE met toute les lignes de la table à jour !**  
 
-### Supprimer tout les lignes d’un table
+#### Supprimer tout les lignes d’un table
 
 - ```sql
   TRUNCATE TABLE nom_table;
@@ -176,49 +176,49 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
 
 # 🔎 Lecture de données
 
-### Afficher toutes les données
+#### Afficher toutes les données
 
 - ```sql
   SELECT * FROM nom_table;
   ```
 
-### Sélectionner des colonnes spécifiques
+#### Sélectionner des colonnes spécifiques
 
 - ```sql
   SELECT colonne1, colonne2 FROM nom_table;
   ```
 
-### Récupérer des valeurs uniques
+#### Récupérer des valeurs uniques
 
 - ```sql
   SELECT DISTINCT colonne FROM table;
   ```
 
-### Filtrer les résultats
+#### Filtrer les résultats
 
 - ```sql
   SELECT * FROM table WHERE condition;
   ```
 
-### Trier les résultats
+#### Trier les résultats
 
 - ```sql
   SELECT * FROM table ORDER BY colonne ASC/DESC;
   ```
 
-### Sélectionner une plage de valeurs
+#### Sélectionner une plage de valeurs
 
 - ```sql
   SELECT * FROM table WHERE colonne BETWEEN valeur1 AND valeur2;
   ```
 
-### Vérifier si une valeur est dans une liste
+#### Vérifier si une valeur est dans une liste
 
 - ```sql
   SELECT * FROM table WHERE colonne IN ('valeur1', 'valeur2');
   ```
 
-### Rechercher des motifs
+#### Rechercher des motifs
 
 - ```sql
   SELECT * FROM table WHERE colonne LIKE 'A%';
@@ -232,7 +232,7 @@ UPDATE clients SET ville = 'Paris' WHERE ville = 'Lyon';
 - `LIKE '%A%'` → contient la lettre A
 - `LIKE '_A%'` → 2e lettre est A (`_` remplace un seul caractère)
 
-### Exemple de lecture données
+#### Exemple de lecture données
 
 ```sql
 SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire ASC LIMIT 1 ##Acteur avec le plus petit salaire
@@ -241,7 +241,7 @@ SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire DESC LIMIT 1 ##Ac
 
 # 🔧 Jointures
 
-### Afficher uniquement les correspondances
+#### Afficher uniquement les correspondances
 
 - ```sql
   INNER JOIN
@@ -249,25 +249,25 @@ SELECT nom, prenom, salaire FROM inv_personne ORDER BY salaire DESC LIMIT 1 ##Ac
   
 💡*Le INNER n'est pas nécessaire mais on l'écrit par convention.*
 
-### Afficher tout de la table1 + correspondances table2
+#### Afficher tout de la table1 + correspondances table2
 
 - ```sql
   LEFT JOIN
   ```
 
-### Afficher tout de la table2 + correspondance de table1
+#### Afficher tout de la table2 + correspondance de table1
 
 - ```sql
   RIGHT JOIN
   ```
 
-### Afficher toute les données des deux tables
+#### Afficher toute les données des deux tables
 
 - ```sql
   FULL JOIN
   ```
 
-### Exemples de jointure
+#### Exemples de jointure
 ```sql
 SELECT COALESCE(SUM(facture.total),0) AS CA_ParCLient, client.nom AS client_nom FROM client LEFT JOIN projet ON client.id = projet.client_id LEFT JOIN devis ON projet.id = devis.projet_id LEFT JOIN facture ON devis.id = facture.devis_id GROUP BY client.id
 
@@ -275,46 +275,70 @@ SELECT acteur.prenom, acteur.nom, film.nom FROM acteur INNER JOIN acteur_film ON
 ```
 # 📈 Fonctions
 
-### Nombres de ligne
+#### Nombres de ligne
 
 - ```sql
   COUNT(colonne)
   ```
 
-### Somme des valeurs
+#### Somme des valeurs
 
 - ```sql
   SUM(colonne)
   ```
 
-### Moyenne des valeurs
+#### Moyenne des valeurs
 
 - ```sql
   AVG(colonne)
   ```
 
-### Valeur minimale
+#### Valeur minimale
 
 - ```sql
   MIN(colonne)
   ```
 
-### Valeur maximale
+#### Valeur maximale
 
 - ```sql
   MAX(colonne)
   ```
 
-### Grouper les résultats
+#### Grouper les résultats
 
 - ```sql
   GROUP BY colonne
   ```
 
-### Filtrer après un GROUP BY
+#### Filtrer après un GROUP BY
 
 - ```sql
   HAVING condition
   ```
 
+# Index  
 
+#### Créer un index
+
+- ```sql
+  CREATE INDEX idx_nom_colonne ON table (colonne);
+  ```  
+
+#### Créer un index unique  
+
+- ```sql
+  CREATE UNIQUE INDEX idx_unique ON table (colonne);
+  ```
+
+#### Vérifier l'existence d'un index  
+
+- ```sql
+  EXPLAIN SELECT * FROM table WHERE colonne = 'valeur';
+  ```  
+
+#### Supprimer un index  
+
+- ```sql
+  DROP INDEX idx_nom_colonne ON table;
+  ```  
