@@ -1,4 +1,4 @@
-# C’est quoi une Base de données ?
+# ❓ C’est quoi une Base de données ?
 
 **Définition : Une base de données est un ensemble structuré de données, généralement stocké de manière électronique, organisé de manière à faciliter leur accès, gestion et mise à jour.** 
 
@@ -14,3 +14,4 @@ Les bases de données sont utilisées pour :
 - Améliorer l'accès rapide et efficace aux données.
 - Permettre des transactions sécurisées et fiables.
 - Faciliter l'analyse des données pour la prise de décision.
+
