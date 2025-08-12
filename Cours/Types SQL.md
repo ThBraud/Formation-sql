@@ -38,4 +38,15 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
   
 - money → Nombre pour valeurs monétaires, précision fixe à 4 décimales (8 octets).
   
-- smallmoney → Comme money mais plage plus petite (4 octets).
+- smallmoney → Comme money mais plage plus petite (4 octets).  
+
+💡 *Le type de données bit est utilisé pour stocker des valeurs booléennes. Les types de données **decimal** et **numeric** sont identiques.*
+
+
+## Approximate numerics
+
+- float(n) → Nombre à virgule flottante approximatif, très grande plage, mais pas précis à 100 % (utile pour les valeurs scientifiques). La taille dépend de n : 4 ou 8 octets.
+
+- real → Version plus petite de float (4 octets), moins de précision que float.  
+  
+
