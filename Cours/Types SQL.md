@@ -21,3 +21,21 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 - Types de données d’objets volumineux : texte, ntext, image, varbinary(max), et xml  
 
 ## Exacts numerics 
+
+- tinyint → Entier très petit, 0 à 255 (1 octet).
+  
+- smallint → Petit entier, -32 768 à 32 767 (2 octets).
+  
+- int → Entier standard, -2 147 483 648 à 2 147 483 647 (4 octets).
+  
+- bigint → Très grand entier, -9 223 372 036 854 775 808 à 9 223 372 036 854 775 807 (8 octets).
+  
+- bit → Valeur binaire 0 ou 1 (booléen).
+  
+- decimal(p,s) → Nombre exact avec précision p (total de chiffres) et échelle s (après la virgule). Stocke avec précision.
+  
+- numeric(p,s) → Même chose que decimal, juste un autre nom.
+  
+- money → Nombre pour valeurs monétaires, précision fixe à 4 décimales (8 octets).
+  
+- smallmoney → Comme money mais plage plus petite (4 octets).
