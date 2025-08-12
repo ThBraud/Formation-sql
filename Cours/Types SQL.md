@@ -14,4 +14,10 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 - ### **Character strings** *(Chaînes de caractères)*
 - ### **Unicode character strings** *(Chaînes de caractères Unicode)*
 - ### **Binary strings** *(Chaînes binaires)*
-- ### **Other data types** *(Autres types de données)*
+- ### **Other data types** *(Autres types de données)*  
+
+💡 Dans SQL Server, selon leurs caractéristiques de stockage, certains types de données sont désignés comme appartenant aux groupes suivants :
+- Types de données de grande valeur : varchar(max), et nvarchar(max)
+- Types de données d’objets volumineux : texte, ntext, image, varbinary(max), et xml  
+
+## Exacts numerics 
