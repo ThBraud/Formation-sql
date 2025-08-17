@@ -88,6 +88,15 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 
 - nvarchar(n) → Comme varchar, mais pour l’Unicode. Longueur variable. Chaque caractère prend 2 octets. Max : 4 000 caractères, ou nvarchar(max) pour jusqu’à 2 Go.
 
-- ntext → Ancien type texte Unicode (jusqu’à 2 Go). Déprécié, remplacé par nvarchar(max).
+- ntext → Ancien type texte Unicode (jusqu’à 2 Go). Déprécié, remplacé par nvarchar(max).  
 
 
+## Binary strings
+
+- binary(n) → Données binaires de taille fixe (comme char mais pour des octets). Max : 8 000 octets.
+
+- varbinary(n) → Données binaires de taille variable (comme varchar). Max : 8 000 octets, ou varbinary(max) jusqu’à 2 Go.
+
+- image → Ancien type pour données binaires volumineuses (images, fichiers, etc.) jusqu’à 2 Go. Déprécié, remplacé par varbinary(max).  
+
+## Other data types
