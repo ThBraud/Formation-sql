@@ -24,8 +24,6 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 
 - tinyint → Entier très petit, *0 à 255*.  
 *Plage → 0 à 255*
-  
-
 
 - smallint → Petit entier  
 *Plage → -32 768 à 32 767*
@@ -71,6 +69,18 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 
 - smalldatetime → Version réduite de datetime, précision = 1 minute. 
 
-💡 *Les plus utilisées aujourd'hui sont date, time, datetime2 et datetimeoffset* 
+💡 *Les plus utilisées aujourd'hui sont date, time, datetime2 et datetimeoffset*  
+
+
+## Character strings  
+
+- char(n) → Chaîne de longueur fixe. Taille max : 8 000 caractères. (1 octet/caractère)
+
+- varchar(n) → Chaîne de longueur variable (ne prend que la place utilisée). Taille max : 8 000 caractères. (1 octet/caractère + 2 octets d’overhead)
+
+- text → Ancien type pour des grandes chaînes (jusqu’à ~2 Go). Déprécié, remplacé par varchar(max).  
+
+
+## Unicode character strings
 
 
