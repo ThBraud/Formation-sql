@@ -99,4 +99,35 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 
 - image → Ancien type pour données binaires volumineuses (images, fichiers, etc.) jusqu’à 2 Go. Déprécié, remplacé par varbinary(max).  
 
-## Other data types
+## Other data types  
+
+- cursor → Pointeur vers un jeu de résultats. Sert pour parcourir ligne par ligne (rare, lourd, à éviter si possible).
+
+- geography → Données spatiales réelles (coordonnées latitude/longitude sur la Terre).
+
+- geometry → Données spatiales planes (points, lignes, polygones dans un plan cartésien).
+
+- hierarchyid → Type spécial pour stocker des structures hiérarchiques (ex : arbre de catégories, organigramme).
+
+- json → Permet de stocker et manipuler du texte JSON (pas un vrai type natif, c’est du nvarchar(max) avec fonctions JSON intégrées). 
+   
+💡 *JSON (JavaScript Object Notation) est un format texte permettant de stocker et d'échanger des données de manière lisible par l'utilisateur et analysable par la machine.*
+
+- vector → Nouveau (SQL Server 2025) : stockage de vecteurs numériques pour l’IA (embedding, recherche sémantique).
+
+- sql_variant → Peut contenir différents types de données (int, decimal, varchar…), sauf text, ntext, image, xml. Utile mais rare.
+
+- table → Variable de type table (stocke un petit jeu de résultats en mémoire, un peu comme une mini-table temporaire).
+
+- uniqueidentifier → Identifiant global unique (GUID), généré avec ```NEWID()``` ou ```NEWSEQUENTIALID()```. Sert de clé primaire parfois.
+
+- xml → Type pour stocker et interroger des données XML, avec index et schémas possibles.
+
+- rowversion (ex timestamp) → Auto-généré, valeur binaire unique qui change à chaque modification de ligne. Sert pour la concurrence.  
+  
+Plus d'explications pour rowversion : 
+- rowversion est une colonne spéciale que SQL Server met à jour automatiquement.
+- Sa valeur change à chaque fois qu’on modifie une ligne de la table.  
+  
+On l'utilise pour savoir si une ligne a changé entre le moment où on l’a lue et le moment où on veut la modifier.
+Ça permet d’éviter qu’un utilisateur écrase les modifications d’un autre sans s’en rendre compte.
