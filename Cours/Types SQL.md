@@ -22,13 +22,19 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 
 ## Exacts numerics 
 
-- tinyint → Entier très petit, 0 à 255 (1 octet).
+- tinyint → Entier très petit, *0 à 255*.  
+*Plage → 0 à 255*
   
-- smallint → Petit entier, -32 768 à 32 767 (2 octets).
+
+
+- smallint → Petit entier  
+*Plage → -32 768 à 32 767*
   
-- int → Entier standard, -2 147 483 648 à 2 147 483 647 (4 octets).
+- int → Entier standard  
+*Plage → -2 147 483 648 à 2 147 483 647*.
   
-- bigint → Très grand entier, -9 223 372 036 854 775 808 à 9 223 372 036 854 775 807 (8 octets).
+- bigint → Très grand entier  
+*Plage → -9 223 372 036 854 775 808* à *9 223 372 036 854 775 807*.
   
 - bit → Valeur binaire 0 ou 1 (booléen).
   
@@ -36,17 +42,35 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
   
 - numeric(p,s) → Même chose que decimal, juste un autre nom.
   
-- money → Nombre pour valeurs monétaires, précision fixe à 4 décimales (8 octets).
+- money → Nombre pour valeurs monétaires, précision fixe à 4 décimales.
   
-- smallmoney → Comme money mais plage plus petite (4 octets).  
+- smallmoney → Comme money mais plage plus petite.  
 
-💡 *Le type de données bit est utilisé pour stocker des valeurs booléennes. Les types de données **decimal** et **numeric** sont identiques.*
+💡 *Le type de données bit est utilisé pour stocker des valeurs booléennes.*
 
 
 ## Approximate numerics
 
-- float(n) → Nombre à virgule flottante approximatif, très grande plage, mais pas précis à 100 % (utile pour les valeurs scientifiques). La taille dépend de n : 4 ou 8 octets.
+- float(n) → Nombre à virgule flottante approximatif, très grande plage, mais pas précis à 100 % (utile pour les valeurs scientifiques).
 
-- real → Version plus petite de float (4 octets), moins de précision que float.  
+- real → Version plus petite de float, moins de précision que float.  
   
+## Date and time  
+
+- date → Stocke uniquement la date.     
+*Format : (AAAA-MM-JJ)*
+
+- time(n) → Stocke uniquement l’heure.  
+*Format : (Heure-Minutes-Secondes)*
+
+- datetime2(n) → Date + heure, précision élevée (7 chiffres après la seconde).
+
+- datetimeoffset(n) → Comme datetime2 mais avec le décalage horaire. Sert à gérer les fuseaux horaires.
+
+- datetime → Ancien type date+heure, précision ≈ 3 ms.
+
+- smalldatetime → Version réduite de datetime, précision = 1 minute. 
+
+💡 *Les plus utilisées aujourd'hui sont date, time, datetime2 et datetimeoffset* 
+
 
