@@ -1,4 +1,4 @@
-# C'est un quoi un type ? 
+# 🧠 C'est un quoi un type ? 
 
 *Dans SQL, chaque colonne, variable locale, expression et paramètre a un type de données associé.*  
 💡**Un type de données est un attribut qui spécifie le type de données que l'objet peut contenir**  
@@ -7,7 +7,7 @@ SQL fournit par défaut un ensemble de types. Mais il est aussi possible pour l'
 
 Dans notre cas, nous aborderons que les types par défaut de SQL.  
 
-# Toutes les catégories de types
+# 🗂️ Toutes les catégories de types
 - ### **Exacts numerics** *(Chiffres exacts)*
 - ### **Approximate numerics** *(Chiffres approximatifs)*
 - ### **Date and time** *(Date et Heure)*
@@ -20,7 +20,7 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 - Types de données de grande valeur : varchar(max), et nvarchar(max)
 - Types de données d’objets volumineux : texte, ntext, image, varbinary(max), et xml  
 
-## Exacts numerics 
+## 🔢 Exacts numerics 
 
 - tinyint → Entier très petit, *0 à 255*.  
 *Plage → 0 à 255*
@@ -47,13 +47,13 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 💡 *Le type de données bit est utilisé pour stocker des valeurs booléennes.*
 
 
-## Approximate numerics
+## 🎲 Approximate numerics
 
 - float(n) → Nombre à virgule flottante approximatif, très grande plage, mais pas précis à 100 % (utile pour les valeurs scientifiques).
 
 - real → Version plus petite de float, moins de précision que float.  
   
-## Date and time  
+## ⏰ Date and time  
 
 - date → Stocke uniquement la date.     
 *Format : (AAAA-MM-JJ)*
@@ -72,7 +72,7 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 💡 *Les plus utilisées aujourd'hui sont date, time, datetime2 et datetimeoffset*  
 
 
-## Character strings  
+## ✍️ Character strings  
 
 - char(n) → Chaîne de longueur fixe. Taille max : 8 000 caractères. (1 octet/caractère)
 
@@ -81,7 +81,7 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 - text → Ancien type pour des grandes chaînes (jusqu’à ~2 Go). Déprécié, remplacé par varchar(max).  
 
 
-## Unicode character strings  
+## 🌐 Unicode character strings  
 💡 *La norme de codage de caractères Unicode est un système de codage de caractères de longueur fixe qui inclut les caractères de presque toutes les langues vivantes du monde.*
 
 - nchar(n) → Comme char, mais pour l’Unicode (UCS-2). Longueur fixe. Chaque caractère prend 2 octets. Max : 4 000 caractères.
@@ -91,7 +91,7 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 - ntext → Ancien type texte Unicode (jusqu’à 2 Go). Déprécié, remplacé par nvarchar(max).  
 
 
-## Binary strings
+## 0️⃣1️⃣ Binary strings
 
 - binary(n) → Données binaires de taille fixe (comme char mais pour des octets). Max : 8 000 octets.
 
@@ -99,7 +99,7 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 
 - image → Ancien type pour données binaires volumineuses (images, fichiers, etc.) jusqu’à 2 Go. Déprécié, remplacé par varbinary(max).  
 
-## Other data types  
+## 📦 Other data types  
 
 - cursor → Pointeur vers un jeu de résultats. Sert pour parcourir ligne par ligne (rare, lourd, à éviter si possible).
 
@@ -125,9 +125,9 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 
 - rowversion (ex timestamp) → Auto-généré, valeur binaire unique qui change à chaque modification de ligne. Sert pour la concurrence.  
   
-Plus d'explications pour rowversion : 
+**Plus d'explications pour rowversion** : 
 - rowversion est une colonne spéciale que SQL Server met à jour automatiquement.
 - Sa valeur change à chaque fois qu’on modifie une ligne de la table.  
   
-On l'utilise pour savoir si une ligne a changé entre le moment où on l’a lue et le moment où on veut la modifier.
-Ça permet d’éviter qu’un utilisateur écrase les modifications d’un autre sans s’en rendre compte.
+💡 *On l'utilise pour savoir si une ligne a changé entre le moment où on l’a lue et le moment où on veut la modifier.
+Ça permet d’éviter qu’un utilisateur écrase les modifications d’un autre sans s’en rendre compte.*
