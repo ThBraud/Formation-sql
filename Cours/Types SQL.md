@@ -81,6 +81,13 @@ Dans notre cas, nous aborderons que les types par défaut de SQL.
 - text → Ancien type pour des grandes chaînes (jusqu’à ~2 Go). Déprécié, remplacé par varchar(max).  
 
 
-## Unicode character strings
+## Unicode character strings  
+💡 *La norme de codage de caractères Unicode est un système de codage de caractères de longueur fixe qui inclut les caractères de presque toutes les langues vivantes du monde.*
+
+- nchar(n) → Comme char, mais pour l’Unicode (UCS-2). Longueur fixe. Chaque caractère prend 2 octets. Max : 4 000 caractères.
+
+- nvarchar(n) → Comme varchar, mais pour l’Unicode. Longueur variable. Chaque caractère prend 2 octets. Max : 4 000 caractères, ou nvarchar(max) pour jusqu’à 2 Go.
+
+- ntext → Ancien type texte Unicode (jusqu’à 2 Go). Déprécié, remplacé par nvarchar(max).
 
 
