@@ -87,4 +87,37 @@ Les caractéristiques essentielles :
 - Un site e-commerce stocke ses produits et commandes. 
 - Application mobiles pour stocke les données en JSON pour les synchroniser facilement
 - Analyses de données massives
-- Fraude bancaire : détecter des connexions suspectes entre plusieurs comptes.
+- Fraude bancaire : détecter des connexions suspectes entre plusieurs comptes.  
+
+
+## Bases de données orientées objet
+
+**Ces bases de données stockent les données sous forme d'objets, similaires à ceux utilisés dans la programmation orientée objet.**  
+
+
+### Caractéristiques 
+- Correspondance directe avec les modèles objets des langages de programmations
+- Encapsulation, héritage et polymorphisme
+- Identité d'objet plutôt que clés primaires
+- Relations directes entre objets  
+  
+### Points forts 
+- Intégration naturelle avec les langages orientés objet
+- Pas de nécessité d'ORM (Object-Relational Mapping)
+- Gestion efficace des structures de données complexes
+- Manipulation directe des objets  
+
+
+### Limites 
+- Moins répandues et standardisées
+- Performances variables selon les implémentations
+- Requêtes moins puissantes que SQL
+- Écosystème d'outils plus limité  
+
+### Exemples 
+- Logicieles scientifiques (molécules, simulations)
+- Jeux vidéos et simulations en temps réels 
+- Applications multimédias (images, vidéos et audios)
+
+
+
