@@ -24,7 +24,7 @@ Les caractéristiques essentielles :
 
 # Les types de bases de données  
 
-## Bases de données relationelles 
+## Bases de données relationnelles 
 
 **Les bases de données relationnelles organisent les données en tables composées de lignes et de colonnes, avec des relations clairement définies entre les tables**
 
@@ -49,12 +49,42 @@ Les caractéristiques essentielles :
 
 ### Exemples  
 - Une banque utilise MySQL pour gérer ses propres clients  
-- Une compagnie aérienne utilise PostgreSQL pour gérer les réservations  
+- Une compagnie aérienne utilise PostgreSQL pour gérer les réservations
+- Un hôpital pour gérer les patients, les consultations et les préscriptions médicales liées aux patients et médecins  
 
 
+## Bases de données non-relationnelles 
 
-## Bases de données non-relationelles 
+**Ces bases de données s'affranchissent du modèle relationnel pour offrir plus de flexibilité et s'adapter à différents types de données. Elles ne stockent pas forcément en tables comme en SQL. Elles sont regroupées en familles, selon leur façon de stocker.**   
+
+### Modèles de bases NoSQL
+- Clé-valeur (Redis, DynamoDB)
+- Documents (MongoDB, CouchDB)
+- Colonnes (Cassandra, HBase)
+- Graphes (Neo4j, JanusGraph)  
 
 
+### Caratéristiques 
+- Schémas flexibles ou absents
+- Haute scalabilité horizontale
+- Généralement BASE plutôt qu'ACID (Basically Available, Soft state, Eventually consistent)
+- Optimisées pour des cas d'usage spécifique  
+
+### Points forts  
+
+- Excellentes performances à grande échelle
+- Adaptées aux données non structurées ou semi-structurées
+- Distribution et réplication facilitées
+- Évolutivité horizontale  
+
+### Limites 
+- Moins de garanties transactionnelles
+- Requêtes complexes parfois plus difficiles
+- Moins standardisées que SQL
 
 
+### Exemples
+- Un site e-commerce stocke ses produits et commandes. 
+- Application mobiles pour stocke les données en JSON pour les synchroniser facilement
+- Analyses de données massives
+- Fraude bancaire : détecter des connexions suspectes entre plusieurs comptes.
