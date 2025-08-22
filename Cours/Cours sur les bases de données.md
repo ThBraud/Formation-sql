@@ -26,7 +26,7 @@ Les caractéristiques essentielles :
 
 ## Bases de données relationnelles 
 
-**Les bases de données relationnelles organisent les données en tables composées de lignes et de colonnes, avec des relations clairement définies entre les tables**
+💡 **Les bases de données relationnelles organisent les données en tables composées de lignes et de colonnes, avec des relations clairement définies entre les tables**  
 
 ### Caratéristiques 
 - Structure rigide avec schéma prédéfini (tables, colonnes)
@@ -55,7 +55,7 @@ Les caractéristiques essentielles :
 
 ## Bases de données non-relationnelles 
 
-**Ces bases de données s'affranchissent du modèle relationnel pour offrir plus de flexibilité et s'adapter à différents types de données. Elles ne stockent pas forcément en tables comme en SQL. Elles sont regroupées en familles, selon leur façon de stocker.**   
+💡 **Ces bases de données s'affranchissent du modèle relationnel pour offrir plus de flexibilité et s'adapter à différents types de données. Elles ne stockent pas forcément en tables comme en SQL. Elles sont regroupées en familles, selon leur façon de stocker.**   
 
 ### Modèles de bases NoSQL
 - Clé-valeur (Redis, DynamoDB)
@@ -92,7 +92,7 @@ Les caractéristiques essentielles :
 
 ## Bases de données orientées objet
 
-**Ces bases de données stockent les données sous forme d'objets, similaires à ceux utilisés dans la programmation orientée objet.**  
+💡 **Ces bases de données stockent les données sous forme d'objets, similaires à ceux utilisés dans la programmation orientée objet.**  
 
 
 ### Caractéristiques 
@@ -115,9 +115,27 @@ Les caractéristiques essentielles :
 - Écosystème d'outils plus limité  
 
 ### Exemples 
-- Logicieles scientifiques (molécules, simulations)
+- Logiciels scientifiques (molécules, simulations)
 - Jeux vidéos et simulations en temps réels 
 - Applications multimédias (images, vidéos et audios)
 
+# Systèmes de Gestion de Bases de Données (SGBD)  
 
+💡 **Un SGBD est un logiciel qui permet de créer, manipuler et administrer des bases de données.**
+
+
+## Fonctions Principales 
+- Définition des données (structure, contraintes)
+- Manipulation des données (insertion, mise à jour, suppression, interrogation)
+- Contrôle de la concurrence
+- Sécurité et contrôle d'accès
+- Intégrité et cohérence des données
+- Sauvegarde et récupération
+
+## Exemples d'applications dans le monde professionnel  
+- Systèmes d'information d'entreprise
+- Applications web et mobiles
+- Analyse de données et business intelligence
+- Intelligence artificielle et apprentissage automatique
+- Internet des objets (IoT)
 
