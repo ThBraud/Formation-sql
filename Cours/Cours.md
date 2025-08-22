@@ -22,7 +22,7 @@ Les caractéristiques essentielles :
 - Sécurité et confidentialité
 - Redondance minimale
 
-## Les types de bases de données  
+# Les types de bases de données  
 
 ### Bases de données relationelles
 
