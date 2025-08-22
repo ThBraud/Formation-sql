@@ -33,7 +33,28 @@ Les caractéristiques essentielles :
 - Utilisation du langage SQL (Structured Query Language)
 - ACID (Atomicité, Cohérence, Isolation, Durabilité)
 - Relations entre tables via les clés primaires et étrangères
-- Normalisation pour réduire la redondance
+- Normalisation pour réduire la redondance  
+
+
+### Points forts 
+- Intégrité des données grâce aux contraintes
+- Transactions sécurisées
+- Requêtes complexes et jointures entre tables
+- Standardisation bien établie  
+
+### Limites  
+- Moins flexible pour les données non structurées
+- Scaling horizontal plus complexe
+- Les performances peuvent diminuer avec de très grands volumes
+
+### Exemples  
+- Une banque utilise MySQL pour gérer ses propres clients  
+- Une compagnie aérienne utilise PostgreSQL pour gérer les réservations  
+
+
+
+## Bases de données non-relationelles 
+
 
 
 
