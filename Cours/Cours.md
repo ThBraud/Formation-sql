@@ -24,9 +24,16 @@ Les caractéristiques essentielles :
 
 # Les types de bases de données  
 
-### Bases de données relationelles
+### Bases de données relationelles 
 
+**Les bases de données relationnelles organisent les données en tables composées de lignes et de colonnes, avec des relations clairement définies entre les tables**
 
+#### Caratéristiques 
+- Structure rigide avec schéma prédéfini (tables, colonnes)
+- Utilisation du langage SQL (Structured Query Language)
+- ACID (Atomicité, Cohérence, Isolation, Durabilité)
+- Relations entre tables via les clés primaires et étrangères
+- Normalisation pour réduire la redondance
 
 
 
