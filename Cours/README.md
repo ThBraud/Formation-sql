@@ -3,6 +3,6 @@ Dans ce dossier, vous pourrez trouver mes cours sur MySQL, les bases de données
 Je rassemble ici toutes mes connaissances acquises durant mes études à Sup De Vinci et sur mon temps personnel.
 
 ## 📋 Énumération des fichiers  
-- Cours sur les bases de données et mySQL
+- Cours sur les bases de données
 - Les types en SQL 
 - Les commandes les plus importantes
