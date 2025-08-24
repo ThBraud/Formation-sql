@@ -57,7 +57,7 @@ Exemplaire : Représente le stock des livres disponibles
 
 Emprunt : Enregistre les transactions de prêt  
 
-### Caractéristiques notables du modèle :
+### ⚙️ Caractéristiques notables du modèle :
 - Les clés primaires sont soulignées (ex: ``ISBN``, ``ID_Auteur``)
 - Les clés étrangères sont en italique et en bleu (ex: ``ID_Éditeur`` dans ``Livre``)
 - Une relation N entre ``Livre`` et ``Auteur`` est modélisée par l'entité d'association ``ÉCRIT_PAR``
@@ -66,7 +66,30 @@ Emprunt : Enregistre les transactions de prêt
 
 💡 **Ce type de diagramme est généralement utilisé dans la conception de bases de données relationnelles pour visualiser la structure et les relations entre les différentes tables avant leur implémentation en SQL.**
 
+# Le modèle objet 
+💡 **Le modèle objet applique les principes de la programmation orientée objet au stockage des données.**  
 
+## ⚙️ Caractéristiques
+- Encapsulation des données et des méthodes
+- Héritage et polymorphisme
+- Classes et instances
+- Relations entre objets (association, agrégation, composition)  
+
+## Avantages
+- Cohérence avec les langages de programmation orientés objet
+- Modélisation plus naturelle des entités complexes
+- Meilleure gestion des types de données complexes
+
+## ⚠️ Inconvénients  
+- Complexité accrue
+- Performance parfois inférieure aux systèmes relationnels
+- Standardisation moins mature  
+
+## Exemple de modèle orienté objet
+
+Voici une illustration représentant un modèle orienté objet pour un système de gestion de cours en ligne. Contrairement au modèle relationnel précédent, ce diagramme de classes UML met en évidence les concepts spécifiques à la programmation orientée objet.  
+
+![alt text](modèle_orienté_objet.png)
 
 
 
