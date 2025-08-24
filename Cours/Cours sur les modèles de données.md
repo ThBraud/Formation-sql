@@ -8,5 +8,3 @@ Dans notre cas en SQL, il en existe plusieurs :
 - Modèle objet-relationnel  
 
 Pour plus de compréhension autour de ces modèles
-
-![alt text](image.png)
