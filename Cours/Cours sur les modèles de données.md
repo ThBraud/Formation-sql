@@ -37,7 +37,8 @@ Dans notre cas en SQL, il en existe plusieurs :
 
 ## Exemple de modèle relationnel 
 
-Voici une illustration d'un modèle relationnel pour un système de gestion de bibliothèque universitaire. Ce diagramme représente les entités principales et leurs relations dans une base de données relationnelle.
+Voici une illustration d'un modèle relationnel pour un système de gestion de bibliothèque universitaire. Ce diagramme représente les entités principales et leurs relations dans une base de données relationnelle.  
+
 
 ![alt text](modèle_relationnel.png)  
 
