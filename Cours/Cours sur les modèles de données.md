@@ -89,7 +89,34 @@ Emprunt : Enregistre les transactions de prêt
 
 Voici une illustration représentant un modèle orienté objet pour un système de gestion de cours en ligne. Contrairement au modèle relationnel précédent, ce diagramme de classes UML met en évidence les concepts spécifiques à la programmation orientée objet.  
 
-![alt text](modèle_orienté_objet.png)
+![alt text](modèle_orienté_objet.png)  
+
+### Caractéristiques du modèle orienté objet illustré  
+
+#### Classes et hiérarchie d'héritage
+- ``Personne`` (classe abstraite) : Contient les attributs et méthodes communs à tous les types de personnes
+- ``Étudiant`` et ``Enseignant`` : Héritent de la classe ``Personne``, démontrant le concept d'héritage
+
+#### Encapsulation
+- Les attributs sont marqués avec "-" pour indiquer qu'ils sont privés
+- Les méthodes sont marquées avec "+" pour indiquer qu'elles sont publiques  
+  
+#### Relations entre classes
+- Héritage : Représenté par des flèches en pointillés avec une tête triangulaire vide (``Étudiant`` et ``Enseignant`` héritent de ``Personne``)
+- Agrégation : Symbolisée par un losange vide (les étudiants sont inscrits à des cours, les modules utilisent des ressources)
+- Composition : Marquée par un losange plein (les cours contiennent des modules)
+- Association : Montrée par une flèche simple (les enseignants enseignent des cours)  
+
+
+#### Multiplicité
+Les cardinalités sont indiquées près des flèches de relation (1..*, *, etc.)
+
+**Ce modèle orienté objet se concentre sur les comportements et les responsabilités des objets, contrairement au modèle relationnel qui se concentre sur la structure des données et leurs relations. On peut voir que ce modèle capture bien les concepts comme l'héritage, l'encapsulation, et les différents types de relations entre objets, qui sont caractéristiques des bases de données orientées objet.**
+
+💡 **Dans une vraie implémentation de base de données orientée objet, les objets seraient stockés directement avec leur structure et leurs comportements, plutôt que d'être décomposés en tables comme dans un modèle relationnel.**
+
+
+
 
 
 
