@@ -141,6 +141,10 @@ Voici une illustration représentant un modèle objet-relationnel pour un systè
 - ``Médecin`` : Contient les informations du médecin en incluant ``Personne`` et ``Coordonnées``. 
 - ``Consultations`` : Contient les informations sur les consultations. Table relationnelle classique avec clés étrangères
 - ``Prescription`` : Contient un tableau (Médicament ARRAY) ainsi que les dates et des instructions. 
+- Collections complexes : Utilisation d'arrays de types simples (VARCHAR ARRAY) ou complexes (Médicament ARRAY)  
+
+- Relations traditionnelles : Les tables conservent des relations par clés étrangères comme dans un modèle relationnel
+
 
 
 
