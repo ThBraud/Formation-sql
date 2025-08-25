@@ -35,4 +35,48 @@ CREATE TABLE Etudiants (
 
 Ces opérations sont souvent utilisées en conjonction avec des transactions pour garantir l'intégrité des données.
 
+### Exemple 
 
+```sql
+-- Insertion de données 
+INSERT INTO Etudiants (nom,prenom, date_naissance) VALUES
+('BRAUD', 'Thomas','2006-12-04')
+
+--Sélection 
+SELECT nom, prenom FROM Etudiants WHERE date_naissance > '2006-12-04';
+
+-- Mise à jour 
+UPDATE Etudiants SET email = 'thomas.braud@supdevinci-edu.fr' WHERE id_etudiant = 1;
+
+--Suppression 
+DELETE FROM Etudiants Where id_etudiant = 1;
+```
+
+## DCL (Data Control Language)
+
+Le DCL permet de gérer les droits et permissions des utilisateurs sur les objets d’une base de données.
+- ``GRANT`` : Accorder des privilèges 
+- ``REVOKE`` : Supprimer des privilèges 
+
+### Exemples 
+
+```sql
+GRANT SELECT, INSERT ON base_etudiants. * TO 'utilisateur1'@'localhost';
+REVOKE INSERT ON base_etudiants. * FROM 'utilisateur1'@'localhost';
+```
+
+## TCL (Transaction Control Language)
+
+Le TCL gère l’exécution des transactions afin d’assurer l’intégrité et la cohérence des données.
+- ``COMMIT`` : Valider une transaction 
+- ``ROLLBACK`` : Annuler une transaction 
+- ``SAVEPOINT`` : Créer un point de sauvegarde dans une transaction
+- ``SET TRANSACTION`` : Spécifier des caractéristiques pour la transaction
+
+## Exemple 
+```sql
+BEGIN ;
+UPDATE comptes SET solde = solde - 500 WHERE id_client = 1;
+UPDATE comptes SET solde = solde + 500 WHERE id_client = 2;
+COMMIT; 
+```
