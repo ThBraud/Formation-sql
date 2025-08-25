@@ -1,6 +1,6 @@
 # ❓ C'est quoi un modèles de donnée ?   
 
-💡 **En informatique, un modèle de données est un modèle qui décrit la manière dont sont représentées les données dans une organisation métier, un système d'information ou une base de données.**
+💡 *En informatique, un modèle de données est un modèle qui décrit la manière dont sont représentées les données dans une organisation métier, un système d'information ou une base de données.*
 
 Dans notre cas en SQL, il en existe plusieurs : 
 - Modèle relationnel
@@ -8,7 +8,7 @@ Dans notre cas en SQL, il en existe plusieurs :
 - Modèle objet-relationnel  
 
 # 🗄️ Le modèle relationnel 
-💡 **Le modèle relationnel, introduit par Edgar F. Codd en 1970, est le modèle le plus utilisé pour les bases de données.**
+💡 *Le modèle relationnel, introduit par Edgar F. Codd en 1970, est le modèle le plus utilisé pour les bases de données.*
 
 ## 📏 Propriétés fondamentales 
 - Atomicité des données
@@ -42,7 +42,7 @@ Voici une illustration d'un modèle relationnel pour un système de gestion de b
 
 ![alt text](Images/modèle_relationnel.png)  
 
-💡 **Les relations entre les entités sont représentées par les connecteurs, avec des indications de cardinalité (1,N) et des "crow's feet" (pattes de corbeau) qui illustrent les relations multiples.**
+💡 *Les relations entre les entités sont représentées par les connecteurs, avec des indications de cardinalité (1,N) et des "crow's feet" (pattes de corbeau) qui illustrent les relations multiples.*
 
 ### 📊 Informations sur les tables 
 Livre : Stocke les informations essentielles sur les livres (ISBN, titre, année de publication, etc.)  
@@ -67,7 +67,7 @@ Emprunt : Enregistre les transactions de prêt
 💡 **Ce type de diagramme est généralement utilisé dans la conception de bases de données relationnelles pour visualiser la structure et les relations entre les différentes tables avant leur implémentation en SQL.**
 
 # 🧩 Le modèle objet 
-💡 **Le modèle objet applique les principes de la programmation orientée objet au stockage des données.**  
+💡 *Le modèle objet applique les principes de la programmation orientée objet au stockage des données.*
 
 ## ⚙️ Caractéristiques
 - Encapsulation des données et des méthodes
@@ -113,7 +113,7 @@ Les cardinalités sont indiquées près des flèches de relation (1..*, *, etc.)
 
 **Ce modèle orienté objet se concentre sur les comportements et les responsabilités des objets, contrairement au modèle relationnel qui se concentre sur la structure des données et leurs relations. On peut voir que ce modèle capture bien les concepts comme l'héritage, l'encapsulation, et les différents types de relations entre objets, qui sont caractéristiques des bases de données orientées objet.**
 
-💡 **Dans une vraie implémentation de base de données orientée objet, les objets seraient stockés directement avec leur structure et leurs comportements, plutôt que d'être décomposés en tables comme dans un modèle relationnel.**
+💡 *Dans une vraie implémentation de base de données orientée objet, les objets seraient stockés directement avec leur structure et leurs comportements, plutôt que d'être décomposés en tables comme dans un modèle relationnel.*
 
 
 
