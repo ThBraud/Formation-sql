@@ -40,7 +40,7 @@ Dans notre cas en SQL, il en existe plusieurs :
 Voici une illustration d'un modèle relationnel pour un système de gestion de bibliothèque universitaire. Ce diagramme représente les entités principales et leurs relations dans une base de données relationnelle.  
 
 
-![alt text](modèle_relationnel.png)  
+![alt text](Images/modèle_relationnel.png)  
 
 💡 **Les relations entre les entités sont représentées par les connecteurs, avec des indications de cardinalité (1,N) et des "crow's feet" (pattes de corbeau) qui illustrent les relations multiples.**
 
@@ -89,7 +89,7 @@ Emprunt : Enregistre les transactions de prêt
 
 Voici une illustration représentant un modèle orienté objet pour un système de gestion de cours en ligne. Contrairement au modèle relationnel précédent, ce diagramme de classes UML met en évidence les concepts spécifiques à la programmation orientée objet.  
 
-![alt text](modèle_orienté_objet.png)  
+![alt text](Images/modèle_orienté_objet.png)  
 
 ### ⚙️ Caractéristiques du modèle orienté objet illustré  
 
@@ -130,7 +130,7 @@ Une combinaison des modèles relationnel et objet, permettant :
 Voici une illustration représentant un modèle objet-relationnel pour un système hospitalier. Ce modèle montre la nature hybride des bases de données objet-relationnelles, qui combinent des concepts relationnels traditionnels avec des fonctionnalités orientées objet.
 
 
-![alt text](objet_relationnel.png)
+![alt text](Images/objet_relationnel.png)
 
 ### ⚙️ Principales caractéristiques 
 - ``Adresse`` : Stocke les informations essentielles sur les adresses (rue, ville, code_postal, pays.)
