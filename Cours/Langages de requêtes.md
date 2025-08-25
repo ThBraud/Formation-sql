@@ -25,4 +25,14 @@ CREATE TABLE Etudiants (
 )ENGINE=INNODB;
 ```
 
+## DML (Data Manipulation Language)  
+
+### Le DML est essentiel pour : 
+- Interroger les données stockées.
+- Ajouter de nouvelles informations.
+- Mettre à jour des enregistrements existants.
+- Supprimer des données obsolètes ou incorrectes.
+
+Ces opérations sont souvent utilisées en conjonction avec des transactions pour garantir l'intégrité des données.
+
 
