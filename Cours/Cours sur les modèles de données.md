@@ -117,7 +117,30 @@ Les cardinalités sont indiquées près des flèches de relation (1..*, *, etc.)
 
 
 
+# Le modèle objet-relationnel  
+Une combinaison des modèles relationnel et objet, permettant :
+- Structure tabulaire avec relations
+- Types de données complexes
+- Héritage
+- Méthodes associées aux types de données
 
+
+## Exemple de modèle objet-relationnel   
+
+Voici une illustration représentant un modèle objet-relationnel pour un système hospitalier. Ce modèle montre la nature hybride des bases de données objet-relationnelles, qui combinent des concepts relationnels traditionnels avec des fonctionnalités orientées objet.
+
+
+![alt text](objet_relationnel.png)
+
+### Principales caractéristiques 
+- ``Adresse`` : Stocke les informations essentielles sur les adresses (rue, ville, code_postal, pays.)
+- ``Coordonnées`` : Stocke toutes les informations de contact. 
+- ``Personne`` : Stocke toute les informations liées à la personne et inclut les informations de l'``Adresse``
+- ``Médicament`` : Stocke toute les informations sur les médicaments
+- ``Patients`` : Contient les informations du patient en incluant ``Personne`` et ``Coordonnées``. 
+- ``Médecin`` : Contient les informations du médecin en incluant ``Personne`` et ``Coordonnées``. 
+- ``Consultations`` : Contient les informations sur les consultations. Table relationnelle classique avec clés étrangères
+- ``Prescription`` : Contient un tableau (Médicament ARRAY) ainsi que les dates et des instructions. 
 
 
 
