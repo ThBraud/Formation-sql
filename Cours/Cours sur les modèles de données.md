@@ -135,8 +135,8 @@ Voici une illustration représentant un modèle objet-relationnel pour un systè
 ### ⚙️ Principales caractéristiques 
 - ``Adresse`` : Stocke les informations essentielles sur les adresses (rue, ville, code_postal, pays.)
 - ``Coordonnées`` : Stocke toutes les informations de contact. 
-- ``Personne`` : Stocke toute les informations liées à la personne et inclut les informations de l'``Adresse``
-- ``Médicament`` : Stocke toute les informations sur les médicaments
+- ``Personne`` : Stocke toutes les informations liées à la personne et inclut les informations de l'``Adresse``
+- ``Médicament`` : Stocke toutes les informations sur les médicaments
 - ``Patients`` : Contient les informations du patient en incluant ``Personne`` et ``Coordonnées``. 
 - ``Médecin`` : Contient les informations du médecin en incluant ``Personne`` et ``Coordonnées``. 
 - ``Consultations`` : Contient les informations sur les consultations. Table relationnelle classique avec clés étrangères
