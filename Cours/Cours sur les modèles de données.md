@@ -7,16 +7,16 @@ Dans notre cas en SQL, il en existe plusieurs :
 - Modèle objet
 - Modèle objet-relationnel  
 
-# Le modèle relationnel 
+# 🗄️ Le modèle relationnel 
 💡 **Le modèle relationnel, introduit par Edgar F. Codd en 1970, est le modèle le plus utilisé pour les bases de données.**
 
-## Propriétés fondamentales 
+## 📏 Propriétés fondamentales 
 - Atomicité des données
 - Structure tabulaire
 - Relations entre tables
 - Contraintes d'intégrité  
 
-## Concepts clés 
+## 🔑 Concepts clés 
 
 - Relation(Table) : Une structure théorique qui représente un ensemble de données. Chaque relation a la même structure (les mêmes colonnes) 
  
@@ -44,7 +44,7 @@ Voici une illustration d'un modèle relationnel pour un système de gestion de b
 
 💡 **Les relations entre les entités sont représentées par les connecteurs, avec des indications de cardinalité (1,N) et des "crow's feet" (pattes de corbeau) qui illustrent les relations multiples.**
 
-### Informations sur les tables 
+### 📊 Informations sur les tables 
 Livre : Stocke les informations essentielles sur les livres (ISBN, titre, année de publication, etc.)  
 
 Auteur : Contient les données des auteurs des livres
@@ -66,7 +66,7 @@ Emprunt : Enregistre les transactions de prêt
 
 💡 **Ce type de diagramme est généralement utilisé dans la conception de bases de données relationnelles pour visualiser la structure et les relations entre les différentes tables avant leur implémentation en SQL.**
 
-# Le modèle objet 
+# 🧩 Le modèle objet 
 💡 **Le modèle objet applique les principes de la programmation orientée objet au stockage des données.**  
 
 ## ⚙️ Caractéristiques
@@ -75,7 +75,7 @@ Emprunt : Enregistre les transactions de prêt
 - Classes et instances
 - Relations entre objets (association, agrégation, composition)  
 
-## Avantages
+## ✅ Avantages
 - Cohérence avec les langages de programmation orientés objet
 - Modélisation plus naturelle des entités complexes
 - Meilleure gestion des types de données complexes
@@ -91,24 +91,24 @@ Voici une illustration représentant un modèle orienté objet pour un système 
 
 ![alt text](modèle_orienté_objet.png)  
 
-### Caractéristiques du modèle orienté objet illustré  
+### ⚙️ Caractéristiques du modèle orienté objet illustré  
 
-#### Classes et hiérarchie d'héritage
+#### 🌳 Classes et hiérarchie d'héritage
 - ``Personne`` (classe abstraite) : Contient les attributs et méthodes communs à tous les types de personnes
 - ``Étudiant`` et ``Enseignant`` : Héritent de la classe ``Personne``, démontrant le concept d'héritage
 
-#### Encapsulation
+#### 📦 Encapsulation
 - Les attributs sont marqués avec "-" pour indiquer qu'ils sont privés
 - Les méthodes sont marquées avec "+" pour indiquer qu'elles sont publiques  
   
-#### Relations entre classes
+#### 🔗 Relations entre classes
 - Héritage : Représenté par des flèches en pointillés avec une tête triangulaire vide (``Étudiant`` et ``Enseignant`` héritent de ``Personne``)
 - Agrégation : Symbolisée par un losange vide (les étudiants sont inscrits à des cours, les modules utilisent des ressources)
 - Composition : Marquée par un losange plein (les cours contiennent des modules)
 - Association : Montrée par une flèche simple (les enseignants enseignent des cours)  
 
 
-#### Multiplicité
+#### ➗ Multiplicité
 Les cardinalités sont indiquées près des flèches de relation (1..*, *, etc.)
 
 **Ce modèle orienté objet se concentre sur les comportements et les responsabilités des objets, contrairement au modèle relationnel qui se concentre sur la structure des données et leurs relations. On peut voir que ce modèle capture bien les concepts comme l'héritage, l'encapsulation, et les différents types de relations entre objets, qui sont caractéristiques des bases de données orientées objet.**
@@ -117,7 +117,7 @@ Les cardinalités sont indiquées près des flèches de relation (1..*, *, etc.)
 
 
 
-# Le modèle objet-relationnel  
+# 🔄 Le modèle objet-relationnel  
 Une combinaison des modèles relationnel et objet, permettant :
 - Structure tabulaire avec relations
 - Types de données complexes
@@ -132,7 +132,7 @@ Voici une illustration représentant un modèle objet-relationnel pour un systè
 
 ![alt text](objet_relationnel.png)
 
-### Principales caractéristiques 
+### ⚙️ Principales caractéristiques 
 - ``Adresse`` : Stocke les informations essentielles sur les adresses (rue, ville, code_postal, pays.)
 - ``Coordonnées`` : Stocke toutes les informations de contact. 
 - ``Personne`` : Stocke toute les informations liées à la personne et inclut les informations de l'``Adresse``
