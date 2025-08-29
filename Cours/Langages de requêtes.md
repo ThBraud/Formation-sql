@@ -104,4 +104,36 @@ JOIN Inscription i ON e.id_etudiant = i.id_etudiant
 JOIN Cours c ON i.id_cours = c.id_cours 
 --Filtre les résultats pour ne conserver que les cours valant plus de 5 crédits
 WHERE c.credits > 5;
+``` 
+
+
+### Fonctions d'agrégations 
+
+Les fonctions d'agrégation permettent de réaliser des calculs sur des ensembles de données.
+
+Exemples de quelques fonctions d'agrégations : 
+- ``AVG()`` pour calculer la moyenne sur un ensemble d’enregistrement 
+- ``COUNT()`` pour compter le nombre d’enregistrement sur une table ou une colonne distincte
+- `MAX()` pour récupérer la valeur maximum d’une colonne sur un ensemble de ligne. Cela s’applique à la fois pour des données numériques ou alphanumérique
+- ``MIN()`` pour récupérer la valeur minimum de la même manière que ``MAX()``
+- ``SUM()`` pour calculer la somme sur un ensemble d’enregistrement  
+
+#### Exemple 
+
+Cette requête retourne la liste des cours et leur nombre d'inscriptions, mais uniquement pour les cours ayant plus de 10 étudiants inscrits.
+
+```sql
+-- Sélectionne l'intitulé du cours et compte le nombre d'étudiants inscrits à ce cours (avec un alias pour la colonne calculée)
+SELECT c.intitule, COUNT (id.idetudiant) AS nombre_inscrits 
+-- Définit la table Cours avec l'alias c comme table de base
+FROM Cours c 
+-- Effectue une jointure externe gauche avec la table Inscriptions pour inclure tous les cours, même ceux sans inscription
+LEFT JOIN Inscriptions i ON c.id_cours = i.id_cours
+-- Regroupe les résultats par intitulé de cours pour appliquer la fonction d'agrégation sur chaque groupe
+GROUP BY c.intitule
+-- Filtre les groupes pour ne conserver que ceux ayant plus de 10 étudiants inscrits
+HAVING COUNT (i.id_etudiannt)
 ```
+
+### Sous-requêtes
+
