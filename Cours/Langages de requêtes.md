@@ -94,21 +94,14 @@ Les jointures permettent de combiner des données provenant de plusieurs tables
 Cette requête retourne la liste des noms et prénoms des étudiants ainsi que les intitulés des cours auxquels ils sont inscrits, mais uniquement pour les cours valant plus de 5 crédits.
 
 ```sql
+--Sélectionne les colonnes nom et prénom de la table Etudiants (alias e) et la colonne intitule de la table Cours (alias c) 
 SELECT e.nom, e.prenom, c.intitule
+-- Définit la table Etudiants (avec l'alias e) comme table de base 
 FROM Etudiants e
+--Effectue une jointure interne avec la table Inscriptions (alias i) en associant les étudiants à leurs inscriptions
 JOIN Inscription i ON e.id_etudiant = i.id_etudiant
+--Effectue une jointure interne avec la table Cours (alias c) en associant les inscriptions aux cours correspondants  
 JOIN Cours c ON i.id_cours = c.id_cours 
+--Filtre les résultats pour ne conserver que les cours valant plus de 5 crédits
 WHERE c.credits > 5;
 ```
-
-Explication :  
-
-- ``SELECT e.nom, e.prenom, c.intitule`` : Sélectionne les colonnes nom et prénom de la table Etudiants (alias e) et la colonne intitule de la table Cours (alias c)  
-
-- ``FROM Etudiants e`` : Définit la table Etudiants avec l'alias e comme table de base  
-  
-- ``JOIN Inscriptions i ON e.id_etudiant = i.id_etudiant`` : Effectue une jointure interne avec la table Inscriptions (alias i) en associant les étudiants à leurs inscriptions  
-
-- ``JOIN Cours c ON i.id_cours = c.id_cours`` : Effectue une jointure interne avec la table Cours (alias c) en associant les inscriptions aux cours correspondants  
-  
-- ``WHERE c.credits > 5`` : Filtre les résultats pour ne conserver que les cours valant plus de 5 crédits
