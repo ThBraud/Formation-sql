@@ -6,3 +6,5 @@ Je rassemble ici toutes mes connaissances acquises durant mes études à Sup De 
 - Cours sur les bases de données
 - Les types en SQL 
 - Les commandes les plus importantes
+- Cours sur les modèles de données 
+- Langages de requêtes
