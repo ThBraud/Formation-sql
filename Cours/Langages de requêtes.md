@@ -1,11 +1,11 @@
-# Langages de requêtes   
+# 💬 Langages de requêtes   
 💡 *Le langage de requête, qui comprend le langage de requête des bases de données, est un langage informatique spécialisé utilisé pour effectuer des requêtes et récupérer des informations dans des bases de données. Il agit comme une interface entre les utilisateurs et les bases de données.* 
 
-## SQL (Structured Query Language)
+## 🗄️ SQL (Structured Query Language)
 SQL est le langage standard pour interagir avec les bases de données relationnelles.  
 
-## DDL (Data Definition Language) 
-### Rôle du DDL 
+## 🏗️ DDL (Data Definition Language) 
+### ⚙️ Rôle du DDL 
 Le DDL permet de définir la structure logique d'une base de données, notamment :
 - La création de tables avec des types de données appropriés.
 - L'établissement de relations entre les tables via des clés primaires et étrangères.
@@ -25,9 +25,9 @@ CREATE TABLE Etudiants (
 )ENGINE=INNODB;
 ```
 
-## DML (Data Manipulation Language)  
+## ✍️ DML (Data Manipulation Language)  
 
-### Le DML est essentiel pour : 
+### ✅ Le DML est essentiel pour : 
 - Interroger les données stockées.
 - Ajouter de nouvelles informations.
 - Mettre à jour des enregistrements existants.
@@ -52,7 +52,7 @@ UPDATE Etudiants SET email = 'thomas.braud@supdevinci-edu.fr' WHERE id_etudiant 
 DELETE FROM Etudiants Where id_etudiant = 1;
 ```
 
-## DCL (Data Control Language)
+## 🔐 DCL (Data Control Language)
 
 Le DCL permet de gérer les droits et permissions des utilisateurs sur les objets d’une base de données.
 - ``GRANT`` : Accorder des privilèges 
@@ -65,7 +65,7 @@ GRANT SELECT, INSERT ON base_etudiants. * TO 'utilisateur1'@'localhost';
 REVOKE INSERT ON base_etudiants. * FROM 'utilisateur1'@'localhost';
 ```
 
-## TCL (Transaction Control Language)
+## 🔄 TCL (Transaction Control Language)
 
 Le TCL gère l’exécution des transactions afin d’assurer l’intégrité et la cohérence des données.
 - ``COMMIT`` : Valider une transaction 
@@ -81,9 +81,9 @@ UPDATE comptes SET solde = solde + 500 WHERE id_client = 2;
 COMMIT; 
 ```
 
-## Requêtes avancées en SQL  
+## 🚀 Requêtes avancées en SQL  
 
-### Les jointures 
+### 🔗 Les jointures 
 
 Les jointures permettent de combiner des données provenant de plusieurs tables
 
@@ -107,7 +107,7 @@ WHERE c.credits > 5;
 ``` 
 
 
-### Fonctions d'agrégations 
+### ➕ Fonctions d'agrégations 
 
 Les fonctions d'agrégation permettent de réaliser des calculs sur des ensembles de données.
 
@@ -135,7 +135,7 @@ GROUP BY c.intitule
 HAVING COUNT (i.id_etudiannt)
 ```
 
-### Sous-requêtes
+### 📥 Sous-requêtes
 
 Les sous-requêtes sont des requêtes imbriquées à l'intérieur d'une requête principale.
 
@@ -159,7 +159,7 @@ WHERE id_etudiants IN (
 ```
 
 
-# Schéma résumé 
+# 🗺️ Schéma résumé 
 
 ![alt text](Images/Schéma_Résumé.png)
 
