@@ -137,3 +137,29 @@ HAVING COUNT (i.id_etudiannt)
 
 ### Sous-requêtes
 
+Les sous-requêtes sont des requêtes imbriquées à l'intérieur d'une requête principale.
+
+#### Exemple 
+
+Cette requête retourne les noms et prénoms de tous les étudiants inscrits au cours dont l'identifiant est 101 (dans notre exemple, il s'agit du cours "Bases de données").
+
+
+
+```sql
+-- Requête principale qui sélectionne le nom et prénom des étudiants
+SELECT nom, prenom
+FROM Etudiants
+-- Condition qui filtre les étudiants dont l'identifiant est présent dans l'ensemble retourné par la sous-requête
+WHERE id_etudiants IN (
+    -- Sous-requête qui retourne les identifiants des étudiants inscrits au cours ayant l'id 101
+    SELECT id_etudiant
+    FROM Inscripitons
+    WHERE id_cours = 101
+);
+```
+
+
+# Schéma résumé 
+
+![alt text](Images/Schéma_Résumé.png)
+
