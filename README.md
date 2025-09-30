@@ -15,5 +15,5 @@ Le but était de découvrir SQL en apprenant les bases :
 ### :notebook: Cours  
 Les cours sont faits par moi-même et regroupent des informations importantes et utiles pour l'apprentissage et l'utilisation de SQL  
 
-### Documentation SQL
+### 📁 Documentation SQL
 [Lien](https://www.w3schools.com/mysql/default.asp)
