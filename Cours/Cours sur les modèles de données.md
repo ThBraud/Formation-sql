@@ -22,7 +22,7 @@ Dans notre cas en SQL, il en existe plusieurs :
  
     - Exemple : Une table ``Client`` avec les colonnes ``ID``, ``Nom`` et ``Email``.   
 
-- Tuple(Ligne) : Un enregistrement unique dans la table. Chaque tuple respecte la stucture de la relation
+- Tuple(Ligne) : Un enregistrement unique dans la table. Chaque tuple respecte la structure de la relation
     - Exemple : ```(1, "Alice", "alice@mail.com")``` est un tuple de la table ``Client``
   
 - Attribut(Colonne) : Une propriété ou un champ d'une relation. Cela décrit le type d'une données stocké. 
