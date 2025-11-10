@@ -61,7 +61,7 @@ ALTER TABLE utilisateurs MODIFY email VARBINARY(255);
 - Connexions sécurisées avec SSL/TLS
 
 ## 🗝️ Fonctions de hachage 
-💡 *Les mots de passents ne doivent jamais être stockés en clair. On utilise donc des fonctions de hachage (ex ; SHA-256, bcrypt).*
+💡 *Les mots de passes ne doivent jamais être stockés en clair. On utilise donc des fonctions de hachage (ex ; SHA-256, bcrypt).*
 
 ### Exemple 
 ```sql
