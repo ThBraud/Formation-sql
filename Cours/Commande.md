@@ -317,7 +317,7 @@ SELECT acteur.prenom, acteur.nom, film.nom FROM acteur INNER JOIN acteur_film ON
   HAVING condition
   ```
 
-# Index  
+# 🔑 Index  
 
 ### Créer un index
 
